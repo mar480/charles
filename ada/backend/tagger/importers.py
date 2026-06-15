@@ -5,6 +5,8 @@ from io import BytesIO, StringIO
 from zipfile import ZipFile
 import xml.etree.ElementTree as ET
 
+from .fixtures import load_manifest
+
 
 CSV_FIELD_ALIASES = {
     "turnover current": "profitLoss.turnover.current",
@@ -15,6 +17,19 @@ CSV_FIELD_ALIASES = {
     "profit or loss previous": "profitLoss.profitLoss.previous",
     "average employees": "notes.averageEmployees.current",
 }
+
+
+def _template_field_lookup() -> dict[str, str]:
+    manifest = load_manifest()
+    lookup: dict[str, str] = {}
+    for field in manifest.get("fields", []):
+        field_id = str(field.get("fieldId", "")).strip()
+        label = str(field.get("label", "")).strip()
+        if field_id:
+            lookup[_normalise_field_key(field_id)] = field_id
+        if label:
+            lookup[_normalise_field_key(label)] = field_id
+    return lookup
 
 
 XLSX_NS = {
@@ -28,7 +43,8 @@ def _normalise_field_key(raw_key: str) -> str:
 
 
 def _field_alias(raw_key: str) -> str | None:
-    return CSV_FIELD_ALIASES.get(_normalise_field_key(raw_key))
+    normalised = _normalise_field_key(raw_key)
+    return CSV_FIELD_ALIASES.get(normalised) or _template_field_lookup().get(normalised)
 
 
 def _build_review(rows: list[dict], existing_fields: dict | None = None, source_type: str = "csv_import") -> dict:

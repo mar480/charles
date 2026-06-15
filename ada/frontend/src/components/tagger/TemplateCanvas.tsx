@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 
 interface TemplateCanvasProps {
   html: string;
@@ -10,9 +10,25 @@ interface TemplateCanvasProps {
 
 const TemplateCanvas = ({ html, fieldOrder, onFieldInput, onBulkFieldInput, onFieldSelect }: TemplateCanvasProps) => {
   const markup = useMemo(() => ({ __html: html }), [html]);
+  const canvasRef = useRef<HTMLDivElement | null>(null);
+
+  const focusField = (fieldId: string) => {
+    const nextField = canvasRef.current?.querySelector<HTMLElement>(`.tagger-editable-field[data-field-id="${CSS.escape(fieldId)}"]`);
+    if (!nextField) {
+      return;
+    }
+    nextField.focus();
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(nextField);
+    range.collapse(false);
+    selection?.removeAllRanges();
+    selection?.addRange(range);
+  };
 
   return (
     <div
+      ref={canvasRef}
       className="tagger-template-canvas"
       onBlurCapture={(event) => {
         const target = event.target as HTMLElement;
@@ -27,6 +43,37 @@ const TemplateCanvas = ({ html, fieldOrder, onFieldInput, onBulkFieldInput, onFi
         const fieldId = target.dataset.fieldId;
         if (fieldId) {
           onFieldSelect(fieldId);
+        }
+      }}
+      onInputCapture={(event) => {
+        const target = event.target as HTMLElement;
+        const fieldId = target.dataset.fieldId;
+        if (!fieldId || !canvasRef.current) {
+          return;
+        }
+        const value = target.textContent || "";
+        const relatedFields = canvasRef.current.querySelectorAll<HTMLElement>(`.tagger-editable-field[data-field-id="${CSS.escape(fieldId)}"]`);
+        relatedFields.forEach((node) => {
+          if (node !== target) {
+            node.textContent = value;
+          }
+        });
+      }}
+      onKeyDownCapture={(event) => {
+        const target = event.target as HTMLElement;
+        const fieldId = target.dataset.fieldId;
+        if (!fieldId || event.key !== "Tab") {
+          return;
+        }
+        event.preventDefault();
+        const currentIndex = fieldOrder.indexOf(fieldId);
+        if (currentIndex === -1) {
+          return;
+        }
+        const offset = event.shiftKey ? -1 : 1;
+        const nextFieldId = fieldOrder[currentIndex + offset];
+        if (nextFieldId) {
+          queueMicrotask(() => focusField(nextFieldId));
         }
       }}
       onPasteCapture={(event) => {

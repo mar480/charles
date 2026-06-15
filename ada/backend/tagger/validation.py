@@ -46,6 +46,17 @@ def _parse_numeric(raw_value: str) -> tuple[bool, bool, bool]:
         return False, negative, integer_like
 
 
+def _normalise_person_name(raw_value: str) -> str:
+    text = " ".join(str(raw_value or "").strip().split())
+    if not text:
+        return ""
+    if "," in text:
+        last_name, first_names = [part.strip() for part in text.split(",", 1)]
+        text = f"{first_names} {last_name}".strip()
+    parts = [part for part in re.split(r"\s+", text.lower()) if part]
+    return " ".join(parts)
+
+
 def run_field_validation(project: dict[str, Any], template: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     results = []
     defaults = project.get("defaults") or {}
@@ -102,15 +113,14 @@ def run_field_validation(project: dict[str, Any], template: dict[str, Any] | Non
                         "message": "Integer field must not contain decimal places.",
                     }
                 )
-            sign_rule = field.get("signRule")
-            if sign_rule == "credit_positive" and not negative and raw_text not in {"0", "0.0"}:
+            elif field_id == "notes.averageEmployees.current" and valid_numeric and float(text := raw_text.strip().replace(",", "").replace("(", "-").replace(")", "")) < 0:
                 results.append(
                     {
-                        "status": "warning",
-                        "severity": "warning",
+                        "status": "error",
+                        "severity": "error",
                         "source": "field-validation",
                         "relatedFieldId": field_id,
-                        "message": "Field usually follows the credit-positive sign convention and may need a negative value.",
+                        "message": "Average number of employees must not be less than 0.",
                     }
                 )
         elif value_type == "date" and not _parse_date(raw_text):
@@ -221,6 +231,27 @@ def run_field_validation(project: dict[str, Any], template: dict[str, Any] | Non
                 "source": "field-validation",
                 "relatedFieldId": "company.name",
                 "message": "Company name differs from the saved Companies House snapshot.",
+            }
+        )
+    director_name = effective_value("project.directorName")
+    snapshot_directors = [
+        str(name).strip()
+        for name in company_snapshot.get("director_names", [])
+        if str(name).strip()
+    ]
+    normalised_director_name = _normalise_person_name(director_name)
+    normalised_snapshot_directors = {_normalise_person_name(name) for name in snapshot_directors}
+    if director_name and snapshot_directors and normalised_director_name not in normalised_snapshot_directors:
+        results.append(
+            {
+                "status": "warning",
+                "severity": "warning",
+                "source": "field-validation",
+                "relatedFieldId": "project.directorName",
+                "message": (
+                    f"Director signing financial statements '{director_name}' does not match the current directors "
+                    f"in the saved Companies House snapshot: {', '.join(snapshot_directors)}."
+                ),
             }
         )
     snapshot_address = company_snapshot.get("registered_office_address") or {}

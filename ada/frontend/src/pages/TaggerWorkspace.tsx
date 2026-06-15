@@ -75,16 +75,45 @@ const TaggerWorkspace = () => {
   });
 
   const handleFieldInput = async (fieldId: string, rawValue: string) => {
-    await updateField(id, fieldId, {
+    const nextState = {
       rawValue,
       normalisedValue: rawValue,
       sourceType: "manual",
       status: rawValue ? "user-edited" : "empty",
-    });
-    await reload();
+    };
+    setProject((current) => current ? ({
+      ...current,
+      fields: {
+        ...current.fields,
+        [fieldId]: {
+          ...(current.fields[fieldId] || {}),
+          ...nextState,
+        },
+      },
+    }) : current);
+    await updateField(id, fieldId, nextState);
   };
 
   const handleBulkFieldInput = async (updates: Array<{ fieldId: string; rawValue: string; sourceType: string }>) => {
+    setProject((current) => {
+      if (!current) {
+        return current;
+      }
+      const nextFields = { ...current.fields };
+      for (const update of updates) {
+        nextFields[update.fieldId] = {
+          ...(nextFields[update.fieldId] || {}),
+          rawValue: update.rawValue,
+          normalisedValue: update.rawValue,
+          sourceType: update.sourceType,
+          status: update.rawValue ? "user-edited" : "empty",
+        };
+      }
+      return {
+        ...current,
+        fields: nextFields,
+      };
+    });
     for (const update of updates) {
       await updateField(id, update.fieldId, {
         rawValue: update.rawValue,

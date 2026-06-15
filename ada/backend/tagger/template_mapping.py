@@ -42,8 +42,8 @@ VISIBLE_FIELD_BINDINGS = {
     "balanceSheet.netAssets.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[12]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:NetAssetsLiabilities'])[2]"},
     "balanceSheet.equity.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[13]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:Equity'])[1]"},
     "balanceSheet.equity.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[13]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:Equity'])[2]"},
-    "notes.averageEmployees.current": {"untagged_xpath": "(//div[@class='small' and strong[contains(., 'Average number of employees')]])[1]", "tagged_xpath": "(//ix:nonFraction[@name='core:AverageNumberEmployeesDuringPeriod'])[1]"},
-    "notes.offBalanceSheetDisclosure": {"untagged_xpath": "(//div[@class='small' and normalize-space(.)='No'])[1]", "tagged_xpath": "(//ix:nonNumeric[@name='core:GeneralDescriptionAnyOff-balanceSheetArrangementsIncludingNaturePurposeFinancialImpactOnEntity'])[1]"},
+    "notes.averageEmployees.current": {"untagged_xpath": "//span[@class='template-placeholder-average-employees']", "tagged_xpath": "(//ix:nonFraction[@name='core:AverageNumberEmployeesDuringPeriod'])[1]"},
+    "notes.offBalanceSheetDisclosure": {"untagged_xpath": "//span[@class='template-placeholder-off-balance-sheet-disclosure']", "tagged_xpath": "(//ix:nonNumeric[@name='core:GeneralDescriptionAnyOff-balanceSheetArrangementsIncludingNaturePurposeFinancialImpactOnEntity'])[1]"},
     "project.authorisationDate": {"tagged_xpath": "(//ix:nonNumeric[@name='core:DateAuthorisationFinancialStatementsForIssue'])[1]"},
     "project.currentPeriodStart": {
         "untagged_xpath": "//span[@class='template-placeholder-current-period-start']",
@@ -55,10 +55,7 @@ VISIBLE_FIELD_BINDINGS = {
     },
     "project.balanceSheetDate": {"tagged_xpath": "(//ix:nonNumeric[@name='bus:BalanceSheetDate'])[1]"},
     "company.name": {
-        "untagged_xpaths": [
-            "(//div[@class='company-name'])[1]",
-            "(//div[@class='company-name'])[2]",
-        ],
+        "untagged_xpath": "//div[@class='company-name']",
         "tagged_xpath": "(//ix:nonNumeric[@name='bus:EntityCurrentLegalOrRegisteredName'])[1]",
     },
     "company.crn": {
@@ -101,5 +98,4 @@ TEXT_REPLACEMENTS = {
     "project.authorisationDate.display": "31 July 2025",
     "project.directorName": "James Osman Kerem Kent",
     "notes.offBalanceSheetDisclosure": "No",
-    "notes.averageEmployees.current": "1",
 }

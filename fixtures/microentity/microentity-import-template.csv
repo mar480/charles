@@ -1,0 +1,56 @@
+field,value
+company.name,SOUND & YMMIJ LTD
+company.crn,10433453
+company.addressLine1,4 Windlebrook Park
+company.addressLine2,Longcross Road
+company.city,Chertsey
+company.region,Surrey
+company.postcode,KT16 0BB
+company.principalActivities,The principal activity of the company during the year under review was the provision of musical entertainment.
+project.currentPeriodStart,2023-11-01
+project.currentPeriodEnd,2024-10-31
+project.balanceSheetDate,2024-10-31
+project.authorisationDate,2025-07-31
+project.directorName,James Osman Kerem Kent
+notes.averageEmployees.current,1
+notes.offBalanceSheetDisclosure,No
+profitLoss.turnover.current,18300
+profitLoss.turnover.previous,13987
+profitLoss.otherIncome.current,0
+profitLoss.otherIncome.previous,0
+profitLoss.costMaterials.current,0
+profitLoss.costMaterials.previous,0
+profitLoss.staffCosts.current,(12570)
+profitLoss.staffCosts.previous,(12570)
+profitLoss.depreciation.current,0
+profitLoss.depreciation.previous,0
+profitLoss.otherCharges.current,(3723)
+profitLoss.otherCharges.previous,(2194)
+profitLoss.tax.current,0
+profitLoss.tax.previous,0
+profitLoss.profitLoss.current,2007
+profitLoss.profitLoss.previous,(777)
+balanceSheet.calledUpShareCapital.current,1
+balanceSheet.calledUpShareCapital.previous,1
+balanceSheet.fixedAssets.current,0
+balanceSheet.fixedAssets.previous,0
+balanceSheet.currentAssets.current,1000
+balanceSheet.currentAssets.previous,1000
+balanceSheet.prepayments.current,0
+balanceSheet.prepayments.previous,0
+balanceSheet.creditorsWithinOneYear.current,(33294)
+balanceSheet.creditorsWithinOneYear.previous,(35301)
+balanceSheet.netCurrentAssets.current,(32294)
+balanceSheet.netCurrentAssets.previous,(34301)
+balanceSheet.totalAssetsLessCurrentLiabilities.current,(32293)
+balanceSheet.totalAssetsLessCurrentLiabilities.previous,(34300)
+balanceSheet.creditorsAfterOneYear.current,0
+balanceSheet.creditorsAfterOneYear.previous,0
+balanceSheet.provisions.current,0
+balanceSheet.provisions.previous,0
+balanceSheet.accruals.current,0
+balanceSheet.accruals.previous,0
+balanceSheet.netAssets.current,(32293)
+balanceSheet.netAssets.previous,(34300)
+balanceSheet.equity.current,(32293)
+balanceSheet.equity.previous,(34300)

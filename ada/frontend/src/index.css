@@ -570,6 +570,71 @@ body {
   border-bottom-color: rgba(31, 92, 76, 0.45);
 }
 
+.tagger-template-canvas .tagger-editable-field[data-field-id="company.name"] {
+  display: block;
+  width: fit-content;
+  min-width: 240px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2px 8px 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  background: rgba(178, 74, 44, 0.06);
+}
+
+.tagger-template-canvas .company-name .tagger-editable-field[data-field-id="company.name"] {
+  border-bottom-width: 3px;
+}
+
+.tagger-template-canvas .tagger-editable-field[data-field-id="company.crn"] {
+  min-width: 72px;
+  text-align: center;
+}
+
+.tagger-template-canvas .tagger-editable-field[data-field-id="company.principalActivities"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 88px;
+  padding: 10px 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  border: 1px solid rgba(178, 74, 44, 0.35);
+  border-bottom-width: 2px;
+  border-radius: 10px;
+  background: rgba(178, 74, 44, 0.06);
+}
+
+.tagger-template-canvas .tagger-editable-field[data-field-id="notes.offBalanceSheetDisclosure"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 88px;
+  padding: 10px 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  border: 1px solid rgba(178, 74, 44, 0.35);
+  border-bottom-width: 2px;
+  border-radius: 10px;
+  background: rgba(178, 74, 44, 0.06);
+}
+
+.tagger-template-canvas .tagger-template-advisory {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid #d9d0c1;
+  border-left: 4px solid #b24a2c;
+  border-radius: 12px;
+  background: #faf6ef;
+  color: #5f4d39;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .tagger-inline-field {
   display: grid;
   gap: 8px;

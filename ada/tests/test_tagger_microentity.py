@@ -211,6 +211,14 @@ class TaggerMicroentityTests(unittest.TestCase):
         self.assertEqual(len(review["warnings"]), 1)
         self.assertEqual(len(review["unmatchedRows"]), 1)
 
+    def test_import_csv_accepts_exact_field_ids_and_labels(self):
+        review = import_csv_text(
+            "field,label,value\ncompany.name,,Example Filing Ltd\n,Company registration number,10433453\n",
+        )
+        self.assertEqual(review["matchedFields"]["company.name"]["rawValue"], "Example Filing Ltd")
+        self.assertEqual(review["matchedFields"]["company.crn"]["rawValue"], "10433453")
+        self.assertEqual(review["unmatchedRows"], [])
+
     def test_import_xlsx_bytes_maps_known_fields(self):
         review = import_xlsx_bytes(_build_minimal_xlsx())
         self.assertEqual(review["matchedFields"]["profitLoss.turnover.current"]["rawValue"], "18300")
@@ -256,12 +264,18 @@ class TaggerMicroentityTests(unittest.TestCase):
         payload["defaults"]["entity.identifierValue"] = "DIFFERENT"
         results = run_field_validation(payload, template)
         self.assertTrue(any("Integer field must not contain decimal places." in result["message"] for result in results))
-        self.assertTrue(any("credit-positive sign convention" in result["message"] for result in results))
         self.assertTrue(any("start date must not be after the end date" in result["message"] for result in results))
         self.assertTrue(any("Entity dormant must be true or false." in result["message"] for result in results))
         self.assertTrue(any("three-letter uppercase code" in result["message"] for result in results))
         self.assertTrue(any("Scale and decimals must be whole numbers." in result["message"] for result in results))
         self.assertTrue(any("does not match the entered CRN" in result["message"] for result in results))
+
+    def test_field_validation_rejects_negative_average_employees(self):
+        template = get_template("microentity-companies-house-v1")
+        payload = _project_payload()
+        payload["fields"]["notes.averageEmployees.current"]["rawValue"] = "-1"
+        results = run_field_validation(payload, template)
+        self.assertTrue(any("must not be less than 0" in result["message"] for result in results))
 
     def test_field_validation_requires_confirmation_for_imported_registered_office(self):
         template = get_template("microentity-companies-house-v1")
@@ -270,6 +284,21 @@ class TaggerMicroentityTests(unittest.TestCase):
         payload["defaults"]["company.registeredOfficeConfirmed"] = "false"
         results = run_field_validation(payload, template)
         self.assertTrue(any("must be confirmed as still current" in result["message"] for result in results))
+
+    def test_field_validation_warns_when_director_name_differs_from_snapshot(self):
+        template = get_template("microentity-companies-house-v1")
+        payload = _project_payload()
+        payload["companySnapshot"] = {"director_names": ["Alice Example", "Bob Example"]}
+        results = run_field_validation(payload, template)
+        self.assertTrue(any("does not match the current directors" in result["message"] for result in results))
+
+    def test_field_validation_normalises_companies_house_director_name_format(self):
+        template = get_template("microentity-companies-house-v1")
+        payload = _project_payload()
+        payload["defaults"]["project.directorName"] = "James Osman Kerem Kent"
+        payload["companySnapshot"] = {"director_names": ["KENT, James Osman Kerem"]}
+        results = run_field_validation(payload, template)
+        self.assertFalse(any("does not match the current directors" in result["message"] for result in results))
 
     def test_build_project_facts_respects_concept_override(self):
         template = get_template("microentity-companies-house-v1")

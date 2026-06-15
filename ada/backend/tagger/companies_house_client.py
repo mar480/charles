@@ -8,6 +8,7 @@ from urllib.request import Request, urlopen
 
 
 COMPANIES_HOUSE_ENDPOINT = "https://api.company-information.service.gov.uk/company/{company_number}"
+COMPANIES_HOUSE_OFFICERS_ENDPOINT = "https://api.company-information.service.gov.uk/company/{company_number}/officers"
 
 
 class CompaniesHouseLookupError(Exception):
@@ -35,19 +36,42 @@ def lookup_company_profile(company_number: str) -> dict:
         raise CompaniesHouseLookupError("Company number is required")
 
     credentials = base64.b64encode(f"{api_key}:".encode("utf-8")).decode("ascii")
-    request = Request(
-        COMPANIES_HOUSE_ENDPOINT.format(company_number=company_number),
-        headers={
-            "Authorization": f"Basic {credentials}",
-            "Accept": "application/json",
-        },
-    )
+    headers = {
+        "Authorization": f"Basic {credentials}",
+        "Accept": "application/json",
+    }
 
     try:
+        request = Request(
+            COMPANIES_HOUSE_ENDPOINT.format(company_number=company_number),
+            headers=headers,
+        )
         with urlopen(request, timeout=15) as response:
-            return json.loads(response.read().decode("utf-8"))
+            profile = json.loads(response.read().decode("utf-8"))
     except HTTPError as exc:
         body = exc.read().decode("utf-8", errors="ignore")
         raise CompaniesHouseLookupError(f"Companies House lookup failed: {exc.code} {body}") from exc
     except URLError as exc:
         raise CompaniesHouseLookupError(f"Companies House lookup failed: {exc.reason}") from exc
+
+    try:
+        officers_request = Request(
+            COMPANIES_HOUSE_OFFICERS_ENDPOINT.format(company_number=company_number),
+            headers=headers,
+        )
+        with urlopen(officers_request, timeout=15) as response:
+            officers_payload = json.loads(response.read().decode("utf-8"))
+        director_names = [
+            str(item.get("name", "")).strip()
+            for item in officers_payload.get("items", [])
+            if str(item.get("officer_role", "")).strip().lower() == "director"
+            and not item.get("resigned_on")
+            and str(item.get("name", "")).strip()
+        ]
+        if director_names:
+            profile["director_names"] = director_names
+    except Exception:
+        # Company profile lookup is still useful even if officers enrichment is unavailable.
+        pass
+
+    return profile
