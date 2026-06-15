@@ -1,0 +1,2709 @@
+[
+  {
+    "elr": "http://xbrl.frc.org.uk/fr/core/roles/Cross-References",
+    "definition": "9991 - Cross-References",
+    "numeric_part": 9991,
+    "root_tree": [
+      {
+        "tree_id": "0000",
+        "uuid": "9a92c942-4241-42f4-8209-92645f9cc47f",
+        "qname": "core:ForAdditionalItemsInStatementIncomeRetainedEarningsSeeStatementChangesInEquitySectionCross-reference",
+        "name": "For additional items in a statement of income and retained earnings, see 'Statement of changes in equity' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld eitemau ychwanegol mewn datganiad incwm ac enillion argadwedig, gweler yr adran 'Datganiad am newidiadau mewn ecwiti' [croesgyfeiriad]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAdditionalItemsInStatementIncomeRetainedEarningsSeeStatementChangesInEquitySectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "60b3a1bf-e12f-4354-9baf-818d77ededfd",
+            "qname": "core:StatementChangesInEquityHeading",
+            "name": "Statement of changes in equity [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Datganiad am newidiadau mewn ecwiti [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:StatementChangesInEquityHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "1450daa5-0ee8-4e50-b8bd-326f46eae3b7",
+        "qname": "core:ForAdditionalPoliciesForFinanceSeeBankingFinanceSectorSectionCross-reference",
+        "name": "For additional policies for finance, see 'Banking and finance sector' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld polisïau ychwanegol ar gyfer cyllid, gweler yr adran 'Sector bancio a chyllid' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAdditionalPoliciesForFinanceSeeBankingFinanceSectorSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "5ec97eef-b158-45e4-bd8e-4e89cb1a30dd",
+            "qname": "core:BankingFinanceSectorItemsHeading",
+            "name": "Banking and finance sector items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau sector bancio a chyllid [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:BankingFinanceSectorItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "7492c1a2-109f-4b4a-ae40-8a15f17f7881",
+        "qname": "core:ForAllowanceForImpairmentLossesSeeAllowanceProvisionForImpairmentLossesSectionCross-reference",
+        "name": "For allowance for impairment losses, see 'Allowance / provision for impairment losses' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld lwfans ar gyfer colled amhariad, gweler yr adran 'Lwfans / darpariaeth ar gyfer colled amhariad' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAllowanceForImpairmentLossesSeeAllowanceProvisionForImpairmentLossesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "f1d2a129-0900-4e9f-b32e-af49be6757aa",
+            "qname": "core:AllowanceProvisionForImpairmentLossesOnFinancialAssetsHeading",
+            "name": "Allowance / provision for impairment losses on financial assets [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Lwfans /darpariaeth ar gyfer colledion amhariad ar asedau ariannol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:AllowanceProvisionForImpairmentLossesOnFinancialAssetsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "297256a8-3112-41d5-a220-4e283be8698e",
+        "qname": "core:ForAnalysisImpairedPastDueButNotImpairedFinancialAssetsSeeFinancialAssetsSectionCross-reference",
+        "name": "For analysis of impaired and of past due but not impaired financial assets, see 'Financial assets' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dadansoddiad o asedau ariannol yr amharwyd arnynt ac sydd eisoes yn ddyledus ond na amharwyd arnynt, gweler yr adran 'Asedau arianno [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAnalysisImpairedPastDueButNotImpairedFinancialAssetsSeeFinancialAssetsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "794c4115-9f2a-4d70-89fc-cf35ff554b5c",
+            "qname": "core:FinancialAssetsHeading",
+            "name": "Financial assets [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Asedau ariannol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FinancialAssetsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "713963de-e357-42b1-82e9-2e73db0c6fe2",
+        "qname": "core:ForAnalysisLoansToFromDirectorsSeeDirectorsAdvancesCreditsGuaranteesSectionCross-reference",
+        "name": "For analysis of loans to and from directors, see 'Directors' advances, credits and guarantees' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dadansoddiad o fenthyciadau i a gan gyfarwyddwyr, gweler yr adran 'Blaensymiau, credydau a gwarantau Cyfarwyddwyr' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAnalysisLoansToFromDirectorsSeeDirectorsAdvancesCreditsGuaranteesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "5ccb09fb-1c8f-49a5-9bb5-3c9bc0d706a9",
+            "qname": "direp:DirectorsAdvancesCreditsGuaranteesHeading",
+            "name": "Directors' advances, credits and guarantees [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Blaensymiau, credydau a gwarantau cyfarwyddwyr [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "direp:DirectorsAdvancesCreditsGuaranteesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "3eaaaead-bd9e-4e49-a9d2-463a723731b0",
+        "qname": "core:ForAnalysisPropertyPlantEquipmentBySegmentUseAppropriateDimensionMembersListedUnderSegmentReportingNoteCross-reference",
+        "name": "For analysis of property, plant and equipment by segment, use appropriate dimension members listed under 'Segment Reporting' note [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer dadansoddiad o eiddo, offer a chyfarpar yn ôl segmentau, defnyddiwch yr aelodau dimensiwn priodol a restrir o dan y nodyn 'Adroddiadau Segment' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAnalysisPropertyPlantEquipmentBySegmentUseAppropriateDimensionMembersListedUnderSegmentReportingNoteCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "2cce847e-f00a-47f9-93a0-874899848b39",
+            "qname": "core:SegmentReportingHeading",
+            "name": "Segment reporting [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Adroddiadau Segment [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:SegmentReportingHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "a6e45f0a-8124-459c-9fa7-3cf55406d678",
+        "qname": "core:ForBasicInformationOnEntitySeeEntityInformationSectionCross-reference",
+        "name": "For basic information on entity, see 'Entity information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer gwybodaeth sylfaenol endid, gweler yr adran 'Gwybodaeth am yr Endid' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForBasicInformationOnEntitySeeEntityInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "022a0f0b-71e2-4735-b761-76f69ee6446e",
+            "qname": "bus:EntityInformationHeading",
+            "name": "Entity information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwybodaeth am yr endid [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "bus:EntityInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "cc04c44c-f5e7-4813-9a85-d13f0a82ffe3",
+        "qname": "core:ForBasicInformationOnFinancialStatementsSeeReportInformationSectionCross-reference",
+        "name": "For basic information on financial statements, see 'Report information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer gwybodaeth sylfaenol am ddatganiadau ariannol, gweler yr adran 'Gwybodaeth adroddiad' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForBasicInformationOnFinancialStatementsSeeReportInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "d9c01409-a95e-4eda-91fd-26f593104322",
+            "qname": "bus:ReportInformationHeading",
+            "name": "Report information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwybodaeth yr adroddiad [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "bus:ReportInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "b1891f95-a49f-4a7c-bcac-ec7c3c3fd730",
+        "qname": "core:ForBreakdownCashGeneratedFromOperationsByDirectOrIndirectMethodSeeNotesOnCashFlowSectionCross-reference",
+        "name": "For breakdown of cash generated from operations by direct or indirect method, see 'Notes on cash flow' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dadansoddiad o arian parod a gynhyrchwyd o weithrediadau drwy ddulliau uniongyrchol ac anuniongyrchol, gweler yr adran 'Nodiadau ar lif arian' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForBreakdownCashGeneratedFromOperationsByDirectOrIndirectMethodSeeNotesOnCashFlowSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "e7c47099-e07d-4ac3-b183-9089c548126a",
+            "qname": "core:NotesOnCashFlowHeading",
+            "name": "Notes on cash flow [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Nodiadau ar lif arian [pennawd[",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:NotesOnCashFlowHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "ccaf5db2-a5d6-4e67-b6e5-7a52927b886d",
+        "qname": "core:ForBreakdownItemsBetweenMayBeReclassifiedToProfitOrLossWillNotBeReclassifiedSeeStatementComprehensiveIncomeSectionCross-reference",
+        "name": "For breakdown of items between 'may be reclassified to profit or loss' and 'will not be reclassified', see 'Statement of comprehensive income' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dadansoddiad o eitemau rhwng 'gellir eu hailddosbarthu i elw neu golled' a 'ni fyddant yn cael eu hailddosbarthu', gweler yr adran 'Datganiad ar incwm cynhwysfawr' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForBreakdownItemsBetweenMayBeReclassifiedToProfitOrLossWillNotBeReclassifiedSeeStatementComprehensiveIncomeSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "310f523c-02a2-4552-824f-a56435ee2d98",
+            "qname": "core:StatementComprehensiveIncomeHeading",
+            "name": "Statement of comprehensive income [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Datganiad o Incwm Cynhwysfawr [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:StatementComprehensiveIncomeHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "6d3d7d24-79c4-441e-b9e7-993af4c0591d",
+        "qname": "core:ForBusinessCombinationsAfterReportingDateSeeBusinessCombinationsSectionCross-reference",
+        "name": "For business combinations after reporting date, see 'Business combinations' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld cyfuniadau Busnes ar ôl y dyddiad adrodd, gweler yr adran 'Cyfuniadau Busnes' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForBusinessCombinationsAfterReportingDateSeeBusinessCombinationsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "6b0b2cc3-1337-47e3-bdf4-1ead8a48d27e",
+            "qname": "core:BusinessCombinationsHeading",
+            "name": "Business combinations [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Cyfuniadau Busnes [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:BusinessCombinationsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "cc8ed975-cc3c-4164-b76f-7a53a4635b3b",
+        "qname": "core:ForCapitalOtherFinancialCommitmentsSeeCommitmentsSectionCross-reference",
+        "name": "For capital and other financial commitments, see 'Commitments' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld ymrwymiad cyfalaf ac ymrwymiad ariannol eraill, gweler yr adran 'Ymrwymiadau' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForCapitalOtherFinancialCommitmentsSeeCommitmentsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "17ea5aa7-879b-4c7c-91c3-f00dd60fcb38",
+            "qname": "core:CommitmentsHeading",
+            "name": "Commitments [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Ymrwymiadau [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:CommitmentsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "34f30e96-2e96-47f1-bdf7-48effde194ca",
+        "qname": "core:ForCashInflowsOutflowsArisingFromDerivativesSeeGrossNetSettledDerivativesAdditionalCashFlowDisclosuresSectionCross-reference",
+        "name": "For cash inflows and outflows arising from derivatives, see 'Gross and net settled derivatives and additional cash flow disclosures' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld mewnlif ac all-lif arian parod sydd yn deillio o ddeilliadau, gweler yr adran 'Deilliadau gros a net wedi eu setlo a datgeliadau llif arian ychwanegol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForCashInflowsOutflowsArisingFromDerivativesSeeGrossNetSettledDerivativesAdditionalCashFlowDisclosuresSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "b52814aa-c436-4b76-8803-ad81e643a566",
+            "qname": "core:GrossNetSettledDerivativesAdditionalCashFlowDisclosuresHeading",
+            "name": "Gross and net settled derivatives and additional cash flow disclosures [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Deilliadau gros a net a setlwyd a datgeliadau llif arian ychwanegol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:GrossNetSettledDerivativesAdditionalCashFlowDisclosuresHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "401d77e3-afeb-42ef-bf25-1361fd7f4e5d",
+        "qname": "core:ForCashPaymentsRelatedToBusinessCombinationsDisposalsSeeBusinessCombinationsDisposalsSectionsCross-reference",
+        "name": "For cash payments related to business combinations and disposals, see 'Business combinations' and 'Disposals' sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld taliad arian parod cysylltiedig â chyfuniadau busnes a gwarediadau, gweler yr adrannau 'Cyfuniadau Busnes' a 'Gwarediadau' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForCashPaymentsRelatedToBusinessCombinationsDisposalsSeeBusinessCombinationsDisposalsSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "2edd8f46-64f6-44d6-94df-53fe2e42259f",
+            "qname": "core:BusinessCombinationsHeading",
+            "name": "Business combinations [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Cyfuniadau Busnes [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:BusinessCombinationsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "8cf5abec-a60c-4631-9f30-b15e0fb10953",
+        "qname": "core:ForCollateralDisclosuresSeeCollateralSectionInBankingFinanceSectionCross-reference",
+        "name": "For collateral disclosures, see 'Collateral' section in banking and finance section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld datgeliadau cyfochrog, gweler yr adran 'Cyfochrog' yn yr adran bancio a chyllid [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForCollateralDisclosuresSeeCollateralSectionInBankingFinanceSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "ce4c4989-c01c-4651-b591-6df5813331b6",
+            "qname": "core:CollateralHeading",
+            "name": "Collateral [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau cyfochrog [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:CollateralHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "f18c0b1d-75f4-465b-960f-7ba5bd0ac0d4",
+        "qname": "core:ForContingentLiabilitiesRelatedToAssociatesSeeInvestmentsInAssociatesSectionCross-reference",
+        "name": "For contingent liabilities related to associates, see 'Investments in associates' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld rhwymedigaethau digwyddiadol cysylltiedig ag unigolion cyswllt, gweler yr adran 'Buddsoddiadau mewn unigolion cyswllt' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForContingentLiabilitiesRelatedToAssociatesSeeInvestmentsInAssociatesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "432d4f5d-2af7-47e7-b1f3-5c3f839ba979",
+            "qname": "core:InvestmentsInAssociatesHeading",
+            "name": "Investments in associates [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Buddsoddiadau mewn unigolion cyswllt [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:InvestmentsInAssociatesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "e1ece311-de69-4c5e-9d05-2514c43ce61b",
+        "qname": "core:ForContingentLiabilitiesRelatedToJointVenturesSeeInvestmentsInJointVenturesSectionCross-reference",
+        "name": "For contingent liabilities related to joint ventures, see 'Investments in joint ventures' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld rhwymedigaethau digwyddiadol cysylltiedig â menter ar y cyd, gweler yr adran 'Buddsoddiadau mewn menter ar y cyd' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForContingentLiabilitiesRelatedToJointVenturesSeeInvestmentsInJointVenturesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "c63415da-1acd-488a-9da2-998d1e2d42dc",
+            "qname": "core:InvestmentsInJointVenturesHeading",
+            "name": "Investments in joint ventures [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Buddsoddiadau mewn menter ar y cyd [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:InvestmentsInJointVenturesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "5c6181ce-49d6-4dac-926a-727b423e5160",
+        "qname": "core:ForContingentLiabilitiesSeeContingentLiabilitiesSectionCross-reference",
+        "name": "For contingent liabilities, see 'Contingent liabilities' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld rhwymedigaethau digwyddiadol, gweler yr adran 'Rhwymedigaeth ddigwyddiadol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForContingentLiabilitiesSeeContingentLiabilitiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "44b8e7b3-2f0e-4708-9f22-75ad1e2e3b9e",
+            "qname": "core:ContingentLiabilitiesHeading",
+            "name": "Contingent liabilities [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Rhwymedigaethau digwyddiadol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ContingentLiabilitiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "54a74002-86e9-4eae-911d-7eb2a5510d52",
+        "qname": "core:ForCreditorsBorrowingsLeaseObligationsAssumedSeeMainLiabilitiesAssumedSectionCross-reference",
+        "name": "For creditors, borrowings and lease obligations assumed, see main 'Liabilities assumed' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld credydwyr, benthyciadau a rhwymedigaethau les tybiedig, gweler y brif adran 'Rhwymedigaethau tybiedig' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForCreditorsBorrowingsLeaseObligationsAssumedSeeMainLiabilitiesAssumedSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "42aa8c97-7657-4077-9ddd-33be33e3d220",
+            "qname": "core:LiabilitiesAssumed",
+            "name": "Liabilities assumed",
+            "xbrl_type": "monetaryItemType",
+            "full_type": "xbrli:monetaryItemType",
+            "label_cy": "Rhwymedigaethau tybiedig",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:LiabilitiesAssumed",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "dd99afda-c22f-40d3-a2de-2057726e0ad0",
+        "qname": "core:ForCreditorsPayablesRelatedToConstructionContractsSeeConstructionContractsSectionCross-reference",
+        "name": "For creditors / payables related to construction contracts, see 'Construction contracts' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld credydwyr / symiau taladwy cysylltiedig â chontractau adeiladu, gweler yr adran 'Contractau Adeiladu' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForCreditorsPayablesRelatedToConstructionContractsSeeConstructionContractsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "50353ae0-71a8-471d-9525-d02427df87a6",
+            "qname": "core:ConstructionContractsHeading",
+            "name": "Construction contracts [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Contractau Adeiladu [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ConstructionContractsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "9eab771c-4319-4f48-8f40-6f994e388aca",
+        "qname": "core:ForCreditorsSeeCreditorsSectionCross-reference",
+        "name": "For creditors, see 'Creditors' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld credydwyr, gweler yr adran 'Credydwyr' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForCreditorsSeeCreditorsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "04e73612-b05e-4456-9d63-e31efd73cba0",
+            "qname": "core:CreditorsHeading",
+            "name": "Creditors [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Credydwyr [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:CreditorsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "0d68d909-db37-4d0d-bf16-7fa868428077",
+        "qname": "core:ForDebtorsInvestmentsCashCashEquivalentsAcquiredSeeMainAssetsAcquiredSectionCross-reference",
+        "name": "For debtors, investments and cash and cash equivalents acquired, see main 'Assets acquired' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dyledwyr, buddsoddiadau ac arian parod a symiau cyfwerth ag arian parod caffaeledig, gweler y brif adran 'Asedau caffaeledig' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDebtorsInvestmentsCashCashEquivalentsAcquiredSeeMainAssetsAcquiredSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "d425f0e1-13a9-4f34-852f-7eb3b0559ba9",
+            "qname": "core:AssetsAcquired",
+            "name": "Assets acquired",
+            "xbrl_type": "monetaryItemType",
+            "full_type": "xbrli:monetaryItemType",
+            "label_cy": "Asedau caffaeledig",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:AssetsAcquired",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "38e51ea5-9837-4e05-85e0-9ff7f62a8ac5",
+        "qname": "core:ForDebtorsReceivablesRelatedToConstructionContractsSeeConstructionContractsSectionCross-reference",
+        "name": "For debtors / receivables related to construction contracts, see 'Construction contracts' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dyledwyr / symiau derbyniadwy cysylltiedig â chontractau adeiladu, gweler yr adran 'Contractau Adeiladu' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDebtorsReceivablesRelatedToConstructionContractsSeeConstructionContractsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "cd140e44-824e-4b2c-897a-40c6f946ba7e",
+            "qname": "core:ConstructionContractsHeading",
+            "name": "Construction contracts [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Contractau Adeiladu [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ConstructionContractsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "a1aa8076-4639-47b3-9dd6-3cb6d85dd76d",
+        "qname": "core:ForDebtorsSeeDebtorsSectionCross-reference",
+        "name": "For debtors, see 'Debtors' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dyledwyr, gweler yr adran 'Dyledwyr' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDebtorsSeeDebtorsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "8fb5c6c3-afe6-4a2c-8ec5-6094ca02625b",
+            "qname": "core:DebtorsHeading",
+            "name": "Debtors [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Dyledwyr [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:DebtorsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "a5a93759-8183-4a76-b733-c30c59409e93",
+        "qname": "core:ForDerecognitionTransfersSecuritisationDisclosuresSeeDerecognitionTransfersFinancialAssetsSecuritisationsSectionInBankingFinanceSectionCross-reference",
+        "name": "For derecognition / transfers and securitisation disclosures, see 'Derecognition / transfers of financial assets and securitisations' section in banking and finance section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld peidio â chydnabod / trosglwyddiadau a datgeliadau gwarantau, gweler yr adran 'Peidio cydnabod / trosglwyddo asedau ariannol a gwarantau' yn yr adran bancio a chyllid [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDerecognitionTransfersSecuritisationDisclosuresSeeDerecognitionTransfersFinancialAssetsSecuritisationsSectionInBankingFinanceSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "3c19cb54-74c4-4ada-a2b1-6c3302aed02f",
+            "qname": "core:DerecognitionTransfersFinancialAssetsSecuritisationsHeading",
+            "name": "Derecognition / transfers of financial assets and securitisations [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Peidio â chydnabod / trosglwyddo asedau ariannol a gwarannu [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:DerecognitionTransfersFinancialAssetsSecuritisationsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "2695a4ac-f337-4dca-9d3a-1dfb3125b655",
+        "qname": "core:ForDerivativeAssetsSeeDerivativesHedgeAccountingSectionCross-reference",
+        "name": "For derivative assets, see 'Derivatives and hedge accounting' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld asedau deilliadol, gweler yr adran 'Deilliadau a chyfrifyddu rhagfantoli' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDerivativeAssetsSeeDerivativesHedgeAccountingSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "cd105101-f9f4-4cc8-b158-f9ab200f73a4",
+            "qname": "core:DerivativesHedgeAccountingHeading",
+            "name": "Derivatives and hedge accounting [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Deilliadau a chyfrifyddu rhagfantoli [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:DerivativesHedgeAccountingHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "63014bdc-7a1f-4b37-9653-2d376976e729",
+        "qname": "core:ForDerivativeLiabilitiesSeeDerivativesHedgeAccountingSectionCross-reference",
+        "name": "For derivative liabilities, see 'Derivatives and hedge accounting' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld rhwymedigaethau deilliadol, gweler yr adran 'Deilliadau a chyfrifyddu rhagfantoli' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDerivativeLiabilitiesSeeDerivativesHedgeAccountingSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "f52a4f32-f974-44a8-9bb8-54ef9663ec5d",
+            "qname": "core:DerivativesHedgeAccountingHeading",
+            "name": "Derivatives and hedge accounting [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Deilliadau a chyfrifyddu rhagfantoli [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:DerivativesHedgeAccountingHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "e5670f1c-4ef2-4624-9526-6451137abc3c",
+        "qname": "core:ForDerivativesSeeDerivativesHedgeAccountingSectionCross-reference",
+        "name": "For derivatives, see 'Derivatives and hedge accounting' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld deilliadau, gweler yr adran 'Deilliadau a chyfrifyddu rhagfantoli' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDerivativesSeeDerivativesHedgeAccountingSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "c5d8e152-0212-48b9-9fd3-7da458944388",
+            "qname": "core:DerivativesHedgeAccountingHeading",
+            "name": "Derivatives and hedge accounting [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Deilliadau a chyfrifyddu rhagfantoli [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:DerivativesHedgeAccountingHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "f00b7d17-74b8-48f1-bd72-f708a4c2237c",
+        "qname": "core:ForDetailsContingentAssetsLiabilitiesRelatedToBusinessCombinationsSeeBusinessCombinationsSectionCross-reference",
+        "name": "For details of contingent assets and liabilities related to business combinations, see 'Business combinations' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld manylion am asedau digwyddiadol a rhwymedigaethau cysylltiedig â chyfuniadau busnes, gweler yr adran 'cyfuniadau Busnes' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDetailsContingentAssetsLiabilitiesRelatedToBusinessCombinationsSeeBusinessCombinationsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "72926881-ccc7-480d-8bab-6bc629d9dc6b",
+            "qname": "core:BusinessCombinationsHeading",
+            "name": "Business combinations [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Cyfuniadau Busnes [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:BusinessCombinationsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "6f09132e-fda6-4851-b15d-7083d29da27a",
+        "qname": "core:ForDirectorsRemunerationSeeDirectorsRemunerationSectionCross-reference",
+        "name": "For directors' remuneration, see 'Directors' remuneration' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld cydnabyddiaethau cyfarwyddwyr, gweler yr adran 'Cydnabyddiaeth cyfarwyddwyr [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDirectorsRemunerationSeeDirectorsRemunerationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "97215534-8d48-48dd-9a5d-fe0da3780997",
+            "qname": "direp:DirectorsRemunerationHeading",
+            "name": "Directors' remuneration [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Cydnabyddiaeth cyfarwyddwr [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "direp:DirectorsRemunerationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "39538687-8a5e-4f2a-b088-29451d9fcb9f",
+        "qname": "core:ForDirectorsRemunerationSeeEmployeeBenefitsOtherEmployeeInformationSectionCross-reference",
+        "name": "For directors' remuneration, see 'Employee benefits and other employee information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld cydnabyddiaeth cyfarwyddwyr, gweler yr adran 'Buddiannau Gweithwyr a gwybodaeth arall am weithwyr [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDirectorsRemunerationSeeEmployeeBenefitsOtherEmployeeInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "04b15673-ee94-4ec1-a10d-ae4b04305c73",
+            "qname": "core:EmployeeBenefitsOtherEmployeeInformationHeading",
+            "name": "Employee benefits and other employee information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Sylwad testun rhydd a gwybodaeth arall am weithwyr [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:EmployeeBenefitsOtherEmployeeInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "13088844-be60-4b99-b8a2-148dd0249012",
+        "qname": "core:ForDisclosuresRelatedToContingentLiabilitiesContingentAssetsSeeCommitmentsContingentAssetsContingentLiabilitiesSectionCross-reference",
+        "name": "For disclosures related to contingent liabilities and contingent assets, see 'Commitments, contingent assets and contingent liabilities' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld datgeliadau cysylltiedig â rhwymedigaethau digwyddiadol ac asedau digwyddiadol, gweler yr adran 'Ymrwymiadau, asedau digwyddiadol a rhwymedigaethau digwyddiadol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDisclosuresRelatedToContingentLiabilitiesContingentAssetsSeeCommitmentsContingentAssetsContingentLiabilitiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "a95ba9cb-6f0c-4597-9515-33f5f32cfc81",
+            "qname": "core:CommitmentsContingentAssetsLiabilitiesHeading",
+            "name": "Commitments, contingent assets and liabilities [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Ymrwymiadau, asedau a rhwymedigaethau dibynnol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:CommitmentsContingentAssetsLiabilitiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "3ec12c2f-0317-4247-b033-039d5b8042c4",
+        "qname": "core:ForDisclosuresRelatedToSpecificAssetsPledgedAsCollateralSubjectToSaleOrRepledgingSeeCollateralSectionCross-reference",
+        "name": "For disclosures related to specific assets pledged as collateral subject to sale or repledging, see 'Collateral' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld datgeliadau cysylltiedig ag asedau penodol a addunedwyd fel eitemau cyfochrog sydd yn ddarostyngedig i werthu neu ail-addunedu, gweler yr adran 'Cyfochrog' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDisclosuresRelatedToSpecificAssetsPledgedAsCollateralSubjectToSaleOrRepledgingSeeCollateralSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "a6cfd8bc-abdd-4474-9c2c-e6340a7cdd59",
+            "qname": "core:CollateralHeading",
+            "name": "Collateral [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau cyfochrog [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:CollateralHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "df36af65-4f00-4b63-806d-1477725f6a53",
+        "qname": "core:ForDividendsDeclaredAfterReportingDateSeeDividendsSectionCross-reference",
+        "name": "For dividends declared after reporting date, see 'Dividends' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld difidendau a ddatganwyd ar ôl dyddiad adrodd, gweler yr adran 'Difidendau' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDividendsDeclaredAfterReportingDateSeeDividendsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "ca753bb2-4578-41ef-8199-8f36b7b2b019",
+            "qname": "core:DividendsHeading",
+            "name": "Dividends [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Difidendau [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:DividendsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "faaaac7a-b6dd-47cd-b60d-581c1a2340cd",
+        "qname": "core:ForEntityDirectorsDeclarationsSeeEntityDirectorsStatementsSectionInDirectorsReportCross-reference",
+        "name": "For entity and directors' declarations, see 'Entity and directors' statements' section in the 'Directors' report' [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld datganiadau endidau a chyfarwyddwyr, gweler yr adran 'Datganiadau endidau a chyfarwyddwyr yn adroddiad y Cyfarwyddwyr' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForEntityDirectorsDeclarationsSeeEntityDirectorsStatementsSectionInDirectorsReportCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "b16554a7-7a64-4b1c-a229-042847122e97",
+            "qname": "direp:EntityDirectorsStatementsHeading",
+            "name": "Entity and directors' statements [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Datganiadau endid a chyfarwyddwyr [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "direp:EntityDirectorsStatementsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "7813fb08-62ce-481a-8ae4-98f5716bdb20",
+        "qname": "core:ForExtractiveIndustryPoliciesSeeExtractiveIndustriesSectorSectionCross-reference",
+        "name": "For extractive industry policies, see 'Extractive industries sector' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld polisïau diwydiant echdynnol, gweler yr adran 'Sector diwydiant echdynnol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForExtractiveIndustryPoliciesSeeExtractiveIndustriesSectorSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "bbe2c493-3a03-47da-89dc-ebd5db5c4ee4",
+            "qname": "core:ExtractiveIndustriesMiningOilGasSectorItemsHeading",
+            "name": "Extractive industries / Mining, oil and gas sector items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Diwydiannau echdynnol / Mwyngloddio, eitemau sector olew a nwy [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ExtractiveIndustriesMiningOilGasSectorItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "e763948e-3c26-457c-959e-e8fedbafa887",
+        "qname": "core:ForFinanceLeaseLiabilitiesSeeObligationsUnderFinanceLeasesLesseesSectionCross-reference",
+        "name": "For finance lease liabilities, see 'Obligations under finance leases, lessees' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld rhwymedigaethau les cyllid, gweler yr adran 'Rhwymedigaethau o dan brydlesi cyllidol, lesddeiliaid' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFinanceLeaseLiabilitiesSeeObligationsUnderFinanceLeasesLesseesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "84103098-75fc-4110-8aa2-5b243ebc270e",
+            "qname": "core:ObligationsUnderFinanceLeasesLesseesHeading",
+            "name": "Obligations under finance leases, lessees [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Rhwymedigaethau o dan brydlesi cyllidol, lesddeiliaid [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ObligationsUnderFinanceLeasesLesseesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "c9fe5882-3686-4de1-a656-9e3eb661239d",
+        "qname": "core:ForFurtherAnalysisFinancialAssetsIncludingImpairmentReclassificationSeeFinancialAssetsSectionCross-reference",
+        "name": "For further analysis of financial assets, including impairment and reclassification, see 'Financial assets' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld mwy o ddadansoddiad o asedau ariannol, yn cynnwys amhariad ac ailddosbarthu, gweler yr adran 'Asedau ariannol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFurtherAnalysisFinancialAssetsIncludingImpairmentReclassificationSeeFinancialAssetsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "1a41aebe-8abe-4424-bf9d-3f1398524fd6",
+            "qname": "core:FinancialAssetsHeading",
+            "name": "Financial assets [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Asedau ariannol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FinancialAssetsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "6e7f7001-de5c-4df2-a227-d21170d3d8cc",
+        "qname": "core:ForFurtherAnalysisLoansReceivablesDesignatedFairValueThroughProfitOrLossSeeFairValueAssetsLiabilitiesSectionCross-reference",
+        "name": "For further analysis of loans and receivables designated at fair value through profit or loss, see 'Fair value of assets and liabilities' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld mwy o ddadansoddiad o fenthyciadau a symiau derbyniadwy a ddynodwyd ar werth teg drwy elw neu golled, gweler yr adran 'Asedau a rhwymedigaethau gwerth teg' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFurtherAnalysisLoansReceivablesDesignatedFairValueThroughProfitOrLossSeeFairValueAssetsLiabilitiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "d99a30f2-d9ca-4861-a09c-ecc74c4f9657",
+            "qname": "core:FairValueAssetsLiabilitiesHeading",
+            "name": "Fair value of assets and liabilities [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwerth teg asedau a rhwymedigaethau [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FairValueAssetsLiabilitiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "e6d0c37e-506d-464c-981a-e2a4fd0073c0",
+        "qname": "core:ForFurtherBreakdownsAssetsLiabilitiesSeeNotesOnAssetsLiabilitiesOtherAppropriateSectionsCross-reference",
+        "name": "For further breakdowns of assets and liabilities, see 'Notes on assets and liabilities' and other appropriate sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld mwy o ddadansoddiad o asedau a rhwymedigaethau, gweler yr adran 'Nodiadau ar asedau a rhwymedigaethau' ac adrannau priodol eraill [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFurtherBreakdownsAssetsLiabilitiesSeeNotesOnAssetsLiabilitiesOtherAppropriateSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "f548f685-585b-4ce9-a428-cc23355d0676",
+            "qname": "core:NotesOnAssetsLiabilitiesHeading",
+            "name": "Notes on assets and liabilities [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Nodiadau ar asedau a rhwymedigaethau [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:NotesOnAssetsLiabilitiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "6aa8bab4-82bb-4e3b-9ef5-952fa0c1e0c2",
+        "qname": "core:ForFurtherBreakdownsIncomeExpensesGainsLossesSeeNotesOnIncomeExpenseOtherAppropriateSectionsCross-reference",
+        "name": "For further breakdowns of income, expenses, gains and losses, see 'Notes on income and expense' and other appropriate sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld mwy o ddadansoddiad o dreuliau, enillion a cholledion, gweler yr adran 'Nodiadau ar incwm a thraul' ac adrannau priodol eraill [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFurtherBreakdownsIncomeExpensesGainsLossesSeeNotesOnIncomeExpenseOtherAppropriateSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "c3d0561f-25dd-4930-bb2f-3aa8da904495",
+            "qname": "core:NotesOnIncomeExpenseHeading",
+            "name": "Notes on income and expense [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Nodiadau ar incwm a gwariant [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:NotesOnIncomeExpenseHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "d03e96b9-5b0c-4bd3-8b74-5777fd8e72fc",
+        "qname": "core:ForFurtherFinanceIncomeExpenseItemsIncludingDividendIncomeSeeFinanceIncomeCostItemsSectionCross-reference",
+        "name": "For further finance income and expense items, including dividend income, see 'Finance income and cost items' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld mwy o eitemau incwm a thraul ariannol, yn cynnwys incwm difidend, gweler yr adran 'Eitemau incwm a chost ariannol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFurtherFinanceIncomeExpenseItemsIncludingDividendIncomeSeeFinanceIncomeCostItemsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "8088a106-b719-4c3e-8df1-1d2b25f654df",
+            "qname": "core:FinanceIncomeCostItemsHeading",
+            "name": "Finance income and cost items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau incwm a chost cyllid [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FinanceIncomeCostItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "daa09002-92f1-4499-a2e0-fcf775bb45cc",
+        "qname": "core:ForFurtherTagsOnCollateralReverseRepurchaseAgreementsSeeCollateralSectionCross-reference",
+        "name": "For further tags on collateral and reverse repurchase agreements, see 'Collateral' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld mwy o dagiau ar gytundebau cyfochrog ac adbryniant gwrthdro, gweler yr adran 'Cyfochrog' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFurtherTagsOnCollateralReverseRepurchaseAgreementsSeeCollateralSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "cbba90d6-d35a-4f73-9e2f-d8a3af711400",
+            "qname": "core:CollateralHeading",
+            "name": "Collateral [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau cyfochrog [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:CollateralHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "5fc8d928-353c-4825-81e1-a10bd2d986fb",
+        "qname": "core:ForGainsLossesFromDisposalsSpecificTypesAssetSeeNetGainLossBeforeTaxItemsSectionCross-reference",
+        "name": "For gains and losses from disposals of specific types of asset, see 'Net gain / loss before tax items' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld enillion a cholledion o waredu mathau penodol o asedau, gweler yr adran 'Enillion /colledion net cyn treth' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForGainsLossesFromDisposalsSpecificTypesAssetSeeNetGainLossBeforeTaxItemsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "85f1c3dd-30c5-4b17-b582-6b3233273e33",
+            "qname": "core:NetGainLossBeforeTaxItemsHeading",
+            "name": "Net gain / loss before tax items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau enillion / colled net cyn treth [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:NetGainLossBeforeTaxItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "3cf9e06f-c456-416c-8296-3a5791973d26",
+        "qname": "core:ForImpactChangesInCreditRiskOnFairValueFinancialInstrumentsSeeFairValueAssetsLiabilitiesSectionCross-reference",
+        "name": "For impact of changes in credit risk on fair value of financial instruments, see 'Fair value of assets and liabilities' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld effaith newidiadau mewn risg credyd ar werth teg offerynnau ariannol, gweler yr adran 'Gwerth teg asedau a rhwymedigaethau' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForImpactChangesInCreditRiskOnFairValueFinancialInstrumentsSeeFairValueAssetsLiabilitiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "50a225fb-a48d-4559-aac6-33ff6bcef0dc",
+            "qname": "core:FairValueAssetsLiabilitiesHeading",
+            "name": "Fair value of assets and liabilities [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwerth teg asedau a rhwymedigaethau [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FairValueAssetsLiabilitiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "52817d2a-99e8-4694-9fc2-e33b17e8a1d0",
+        "qname": "core:ForImpairmentFinancialAssetsSeeFinanceIncomeCostItemsSectionCross-reference",
+        "name": "For impairment of financial assets, see 'Finance income and cost items' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld amhariad ar asedau ariannol, gweler yr adran 'Incwm ariannu ac eitemau cost' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForImpairmentFinancialAssetsSeeFinanceIncomeCostItemsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "b6e48d55-08e2-437f-81d0-2b5b7c458163",
+            "qname": "core:FinanceIncomeCostItemsHeading",
+            "name": "Finance income and cost items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau incwm a chost cyllid [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FinanceIncomeCostItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "ce4e665f-9e62-4904-8a88-67521e2b6871",
+        "qname": "core:ForImpairmentLossReversalAmountsSeeImpairmentLossesReversalsSectionUnderNotesOnIncomeExpenseCross-reference",
+        "name": "For impairment loss and reversal amounts, see 'Impairment losses and reversals' section under 'Notes on income and expense' [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld colledion amhariad a symiau gwrthdro, gweler yr adran 'Colledion amhariad a gwrthdro' o dan 'Nodiadau ar incwm a thraul' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForImpairmentLossReversalAmountsSeeImpairmentLossesReversalsSectionUnderNotesOnIncomeExpenseCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "6317d342-f951-40d2-b639-1f58b2568839",
+            "qname": "core:ImpairmentLossesReversalsHeading",
+            "name": "Impairment losses and reversals [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Colledion amhariad a gwrthdro [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ImpairmentLossesReversalsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "495e4387-466e-483d-99e6-113bce8920d8",
+        "qname": "core:ForImpairmentNon-financialAssetsSeeOperatingExpenseItemsSectionCross-reference",
+        "name": "For impairment of non-financial assets, see 'Operating expense items' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld amhariad ar asedau nad ydynt yn ariannol, gweler yr adran 'Eitemau traul gweithredol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForImpairmentNon-financialAssetsSeeOperatingExpenseItemsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "0c3942af-c88e-4c64-b88f-faa8b5198e61",
+            "qname": "core:OperatingExpenseItemsHeading",
+            "name": "Operating expense items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau traul gweithredol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:OperatingExpenseItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "5c2132a7-180a-4f7e-8049-722b97732d22",
+        "qname": "core:ForImpairmentOtherFinancialAssetsSeeFinanceIncomeCostItemsSectionCross-reference",
+        "name": "For impairment of other financial assets, see 'Finance income and cost items' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld amhariad ar asedau ariannol eraill, gweler yr adran 'Incwm ariannu ac eitemau cost' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForImpairmentOtherFinancialAssetsSeeFinanceIncomeCostItemsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "be163f0f-f326-4614-9784-817a1887a3ba",
+            "qname": "core:FinanceIncomeCostItemsHeading",
+            "name": "Finance income and cost items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau incwm a chost cyllid [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FinanceIncomeCostItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "8c544ed8-20b0-46ac-ac77-2788f48d0b30",
+        "qname": "core:ForItemsRelatedToDiscontinuedActivitiesSeeDisposalsDiscontinuedOperationsSectionCross-reference",
+        "name": "For items related to discontinued activities, see 'Disposals and discontinued operations' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld eitemau cysylltiedig â gweithgareddau a derfynwyd, gweler yr adran 'Gwarediadau a gweithrediadau a derfynwyd [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForItemsRelatedToDiscontinuedActivitiesSeeDisposalsDiscontinuedOperationsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "68cbf080-b3cd-43cd-b93a-a32812a96222",
+            "qname": "core:DisposalsDiscontinuedOperationsHeading",
+            "name": "Disposals and discontinued operations [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwarediadau a gweithrediadau a derfynwyd [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:DisposalsDiscontinuedOperationsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "13af8e7b-9f1a-4ba6-b2c0-4ac1d81d5e23",
+        "qname": "core:ForLeaseReceivablesSeeLeasingArrangementsLessorsSectionCross-reference",
+        "name": "For lease receivables, see 'Leasing arrangements, lessors' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld symiau derbyniadwy les, gweler yr adran 'trefniadau lesio, leswyr' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForLeaseReceivablesSeeLeasingArrangementsLessorsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "6a7747e4-cf08-4c08-88ff-eb4ee385b48d",
+            "qname": "core:LeasingArrangementsLessorsHeading",
+            "name": "Leasing arrangements, lessors [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Trefniadau prydlesu, sawl sy'n rhoi prydles [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:LeasingArrangementsLessorsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "3dd724c7-26c3-434a-92cc-9ef37a12d73a",
+        "qname": "core:ForNetAssetsLiabilitiesAttributableToShareholdersSeeBalanceSheetAdditionalItemsSectionCross-reference",
+        "name": "For net assets (liabilities) attributable to shareholders, see 'Balance Sheet, additional items' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld asedau net (rhwymedigaethau) y gellir eu priodoli i randdeiliaid, gweler yr adran 'Mantolen, eitemau ychwanegol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForNetAssetsLiabilitiesAttributableToShareholdersSeeBalanceSheetAdditionalItemsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "42af1df3-1cbe-4027-bb24-98c957d02efc",
+            "qname": "core:BalanceSheetAdditionalItemsForInvestmentFundsWithSharesClassifiedAsLiabilityHeading",
+            "name": "Balance sheet, additional items for investment funds with shares classified as liability [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Mantolen, eitemau ychwanegol ar gyfer cronfeydd buddsoddi gyda chyfranddaliadau wedi eu dosbarthu fel atebolrwydd [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:BalanceSheetAdditionalItemsForInvestmentFundsWithSharesClassifiedAsLiabilityHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "3372bde3-b62c-44c2-b944-75c541e8639a",
+        "qname": "core:ForOperatingLeaseExpensesSeeOperatingExpenseItemsSectionCross-reference",
+        "name": "For operating lease expenses, see 'Operating expense items' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld treuliau les weithredol, gweler yr adran 'Eitemau traul gweithredol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForOperatingLeaseExpensesSeeOperatingExpenseItemsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "0094eaf3-d81a-4c33-b583-fcd62f8c3f70",
+            "qname": "core:OperatingExpenseItemsHeading",
+            "name": "Operating expense items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau traul gweithredol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:OperatingExpenseItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "f8939e07-1c50-453d-8989-984f0afc418b",
+        "qname": "core:ForOtherBankingFinanceAssetsItemsSeeFinancialAssetsAdditionalBankingFinanceItemsOtherAppropriateSectionsCross-reference",
+        "name": "For other banking and finance assets items, see 'Financial assets, additional banking and finance items' and other appropriate sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld eitemau asedau bancio a chyllid eraill, gweler yr adran 'Asedau ariannol, eitemau bancio a chyllid ychwanegol' ac adrannau priodol eraill [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForOtherBankingFinanceAssetsItemsSeeFinancialAssetsAdditionalBankingFinanceItemsOtherAppropriateSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "462002e3-b058-4549-8061-943fc8f2f976",
+            "qname": "core:FinancialAssetsAdditionalBankingFinanceItemsHeading",
+            "name": "Financial assets, additional banking and finance items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Asedau ariannol, eitemau bancio a chyllid ychwanegol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FinancialAssetsAdditionalBankingFinanceItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "36f06b65-148f-40f5-a274-716d3f6690b0",
+        "qname": "core:ForOtherBankingFinanceLiabilitiesItemsSeeFinancialLiabilitiesAdditionalBankingFinanceItemsOtherAppropriateSectionsCross-reference",
+        "name": "For other banking and finance liabilities items, see 'Financial liabilities, additional banking and finance items' and other appropriate sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld eitemau rhwymedigaethau bancio a chyllid eraill, gweler yr adran 'Rhwymedigaethau ariannol, eitemau bancio a chyllid ychwanegol' ac adrannau priodol eraill [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForOtherBankingFinanceLiabilitiesItemsSeeFinancialLiabilitiesAdditionalBankingFinanceItemsOtherAppropriateSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "2052985c-190b-4284-86a9-889bd0b44c8f",
+            "qname": "core:FinancialLiabilitiesAdditionalBankingFinanceItemsHeading",
+            "name": "Financial liabilities, additional banking and finance items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Rhwymedigaethau ariannol, eitemau bancio a chyllid ychwanegol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:FinancialLiabilitiesAdditionalBankingFinanceItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "4c11233b-54cf-4a1c-9442-9fa77c8842fc",
+        "qname": "core:ForOtherGainsLossesRelatedToCashFlowHedgesSeeEquity-MovementAnalysisSectionCross-reference",
+        "name": "For other gains and losses related to cash flow hedges, see 'Equity - movement analysis' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld enillion a cholledion eraill cysylltiedig â rhagfantoli llif arian, gweler 'Ecwiti - dadansoddiad o symudiad' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForOtherGainsLossesRelatedToCashFlowHedgesSeeEquity-MovementAnalysisSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "00b7468e-5020-4298-9de0-831d89f3aa68",
+            "qname": "core:Equity-MovementAnalysisHeading",
+            "name": "Equity - movement analysis [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Ecwiti - dadansoddiad o symudiad [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:Equity-MovementAnalysisHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "1a198ed9-629f-43ed-892e-896d1acd2dae",
+        "qname": "core:ForOtherGainsLossesRelatedToHedgesNetInvestmentsSeeEquity-MovementAnalysisSectionCross-reference",
+        "name": "For other gains and losses related to hedges of net investments, see 'Equity - movement analysis' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld enillion a cholledion eraill cysylltiedig â rhagfantoli buddsoddiadau net, gweler 'Ecwiti - dadansoddiad o symudiad' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForOtherGainsLossesRelatedToHedgesNetInvestmentsSeeEquity-MovementAnalysisSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "7b90e6ca-a337-4677-92a1-ea7ee29c234a",
+            "qname": "core:Equity-MovementAnalysisHeading",
+            "name": "Equity - movement analysis [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Ecwiti - dadansoddiad o symudiad [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:Equity-MovementAnalysisHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "2650b7e5-ee44-436f-936d-b0811abb40c8",
+        "qname": "core:ForProvisionsForObsolescenceSeeProvisionsSectionCross-reference",
+        "name": "For provisions for obsolescence, see 'Provisions' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer darpariaethau ar gyfer anarferiant, gweler yr adran 'Darpariaethau' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForProvisionsForObsolescenceSeeProvisionsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "4cc8278c-8c9b-4363-bbb3-dd7a942bdf28",
+            "qname": "core:ProvisionsHeading",
+            "name": "Provisions [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Darpariaethau [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ProvisionsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "e8c4fbb9-dad8-4362-abb7-5703cb2820c0",
+        "qname": "core:ForProvisionsRelatedToPropertyPlantEquipmentSeeProvisionsSectionCross-reference",
+        "name": "For provisions related to property, plant and equipment, see 'Provisions' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer darpariaethau cysylltiedig ag eiddo, offer a chyfarpar, gweler yr adran 'Darpariaethau' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForProvisionsRelatedToPropertyPlantEquipmentSeeProvisionsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "d5bae0db-40a7-44ab-8729-a55e075e7d5e",
+            "qname": "core:ProvisionsHeading",
+            "name": "Provisions [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Darpariaethau [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ProvisionsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "8ef8e6e3-b81d-4177-a983-5ee48cfcdd3d",
+        "qname": "core:ForReconciliationStatementsRelatingToCashFlowsSeeNotesOnCashFlowSectionCross-reference",
+        "name": "For reconciliation statements relating to cash flows, see 'Notes on cash flow' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer datganiadau cysoni cysylltiedig â llif arian, gweler yr adran 'Nodiadau ar lif arian' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForReconciliationStatementsRelatingToCashFlowsSeeNotesOnCashFlowSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "6bed1f30-d193-4d61-8490-5a674aecfe3f",
+            "qname": "core:NotesOnCashFlowHeading",
+            "name": "Notes on cash flow [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Nodiadau ar lif arian [pennawd[",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:NotesOnCashFlowHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "796ac1cc-0272-429d-9d38-199c36d6e097",
+        "qname": "core:ForRemainingIncomeStatementItemsSeeIncomeStatementSectionCross-reference",
+        "name": "For remaining income statement items, see 'Income statement' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer eitemau datganiad incwm eraill, gweler yr adran 'datganiad incwm' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForRemainingIncomeStatementItemsSeeIncomeStatementSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "9fb07d82-ea9c-4f65-87bc-e91649096a50",
+            "qname": "core:IncomeStatementHeading",
+            "name": "Income statement [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Datganiad incwm [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:IncomeStatementHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "d5e4bb83-a74a-4039-bc36-3354c20b2acc",
+        "qname": "core:ForShareNumbersRelatedInformationSeeShareCapitalSectionCross-reference",
+        "name": "For share numbers and related information, see 'Share capital' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer rhifau cyfranddaliad a gwybodaeth gysylltiedig, gweler yr adran 'Cyfalaf cyfranddaliadau' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForShareNumbersRelatedInformationSeeShareCapitalSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "a6dda0bf-27ac-493f-9e0e-2f06cf515fab",
+            "qname": "core:ShareCapitalDividendsHeading",
+            "name": "Share capital and dividends [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Cyfalaf cyfranddaliadau a difidendau [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ShareCapitalDividendsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "8e99163b-a350-40ef-941a-405e04bd73f5",
+        "qname": "core:ForSpecificImpairmentLossReversalSeeSpecificMaterialImpairmentLossOrReversalIntangibleAssetsGroupingSectionUnderNotesOnIncomeCross-reference",
+        "name": "For specific impairment loss and reversal, see 'Specific material impairment loss or reversal, intangible assets [grouping]' section under 'Notes on Income' [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer colled amhariad penodol a gwrthdro, gweler yr adran 'Colled neu wrthdro amhariad sylweddol penodol, asedau anniriaethol [grwpio]' o dan 'Nodiadau ar Incwm' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForSpecificImpairmentLossReversalSeeSpecificMaterialImpairmentLossOrReversalIntangibleAssetsGroupingSectionUnderNotesOnIncomeCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "8bc204bb-4e8b-422e-81c3-7c5f300791ac",
+            "qname": "core:SpecificMaterialImpairmentLossOrReversalIntangibleAssetsGrouping",
+            "name": "Specific material impairment loss or reversal, intangible assets [grouping]",
+            "xbrl_type": "groupingItemType",
+            "full_type": "types:groupingItemType",
+            "label_cy": "Colled neu gildroad amhariad sylweddol penodol, asedau anniriaethol [grwpio]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:SpecificMaterialImpairmentLossOrReversalIntangibleAssetsGrouping",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "91029b3c-ccc3-41da-ae84-33372f8aa67d",
+        "qname": "core:ForTagsOnCollateralRepurchaseAgreementsSeeCollateralSectionCross-reference",
+        "name": "For tags on collateral and repurchase agreements, see 'Collateral' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld tagiau ar gytundebau cyfochrog ac adbryniant, gweler yr adran 'Cyfochrog' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForTagsOnCollateralRepurchaseAgreementsSeeCollateralSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "94f4b33a-0b35-41a8-ba98-2461571267f4",
+            "qname": "core:CollateralHeading",
+            "name": "Collateral [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Eitemau cyfochrog [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:CollateralHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "57bb1bb4-35c0-4ae5-b102-50b814df44ba",
+        "qname": "core:ForTaxOnComponentsOtherComprehensiveIncomeSeeOtherComprehensiveIncomeSectionUnderIncomeTaxSectionCross-reference",
+        "name": "For tax on components of other comprehensive income, see other comprehensive income section under 'Income tax' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer treth ar gydrannau incwm cynhwysfawr arall, gweler yr adran incwm cynhwysfawr arall o dan yr adran 'Treth Incwm' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForTaxOnComponentsOtherComprehensiveIncomeSeeOtherComprehensiveIncomeSectionUnderIncomeTaxSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "759ce9b1-0738-4869-8f4a-6fbd9db25ec5",
+            "qname": "core:IncomeTaxHeading",
+            "name": "Income tax [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Treth Incwm [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:IncomeTaxHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "15724709-25e0-4ee0-bbb6-e66c667a741e",
+        "qname": "core:ForTradeOtherPayablesLeaseObligationsAssumedSeeMainLiabilitiesAssumedSectionCross-reference",
+        "name": "For trade and other payables and lease obligations assumed, see main 'Liabilities assumed' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld symiau masnach taladwy a symiau taladwy eraill a rhwymedigaethau les tybiedig, gweler y brif adran 'Rhwymedigaethau tybiedig' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForTradeOtherPayablesLeaseObligationsAssumedSeeMainLiabilitiesAssumedSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "e7f1c1f0-0e50-4ff8-9168-f53bbe3c3013",
+            "qname": "core:LiabilitiesAssumed",
+            "name": "Liabilities assumed",
+            "xbrl_type": "monetaryItemType",
+            "full_type": "xbrli:monetaryItemType",
+            "label_cy": "Rhwymedigaethau tybiedig",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:LiabilitiesAssumed",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "9b870f27-207c-4f59-aadc-189f284870fa",
+        "qname": "core:ForTradeOtherPayablesSeeTradeOtherPayablesSectionCross-reference",
+        "name": "For trade and other payables, see 'Trade and other payables' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld symiau masnach taladwy a symiau taladwy eraill, gweler yr adran 'Masnach a symiau taladwy eraill' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForTradeOtherPayablesSeeTradeOtherPayablesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "549f4719-9919-4b98-9b9a-af54e2b485ea",
+            "qname": "core:TradeOtherPayablesHeading",
+            "name": "Trade and other payables [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Symiau masnach taladwy a symiau taladwy eraill [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:TradeOtherPayablesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "f39fa1e1-7375-4233-9c30-819014ba9944",
+        "qname": "core:ForTradeOtherReceivablesCashCashEquivalentsAcquiredSeeMainAssetsAcquiredSectionCross-reference",
+        "name": "For trade and other receivables and cash and cash equivalents acquired, see main 'Assets acquired' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld symiau masnach derbyniadwy a symiau derbyniadwy eraill ac arian parod a symiau cyfwerth ag arian parod caffaeledig, gweler y brif adran 'Asedau caffaeledig' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForTradeOtherReceivablesCashCashEquivalentsAcquiredSeeMainAssetsAcquiredSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "0d54c7d2-a047-43b0-b4ea-3ec0d0b84200",
+            "qname": "core:AssetsAcquired",
+            "name": "Assets acquired",
+            "xbrl_type": "monetaryItemType",
+            "full_type": "xbrli:monetaryItemType",
+            "label_cy": "Asedau caffaeledig",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:AssetsAcquired",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "d961135f-04d5-4eb5-a54d-7c73439eea07",
+        "qname": "core:ForTradeOtherReceivablesSeeTradeOtherReceivablesSectionCross-reference",
+        "name": "For trade and other receivables, see 'Trade and other receivables' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld symiau masnach taladwy a symiau taladwy eraill, gweler yr adran 'Masnach a symiau taladwy eraill' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForTradeOtherReceivablesSeeTradeOtherReceivablesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "41d57e06-f10d-4cd1-892c-da791eee5eac",
+            "qname": "core:TradeOtherReceivablesHeading",
+            "name": "Trade and other receivables [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Symiau masnach taladwy a symiau taladwy eraill [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:TradeOtherReceivablesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "5c7f13ce-b1e9-4eb9-a8b7-b11c926e0b5b",
+        "qname": "core:ForUnconsolidatedEntitiesSeeInvestmentsInUnconsolidatedStructuredEntitiesSectionCross-reference",
+        "name": "For unconsolidated entities, see 'Investments in unconsolidated structured entities' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer endidau nad ydynt wedi eu cyfuno, gweler yr adran 'Buddsoddiadau mewn endidau strwythuredig heb eu cyfuno' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForUnconsolidatedEntitiesSeeInvestmentsInUnconsolidatedStructuredEntitiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "0deebe85-7815-40d2-9402-28dea72624fa",
+            "qname": "core:InvestmentsInUnconsolidatedStructuredEntitiesHeading",
+            "name": "Investments in unconsolidated structured entities [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Buddsoddiadau mewn endidau strwythuredig heb eu cyfuno [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:InvestmentsInUnconsolidatedStructuredEntitiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "37a5baac-565a-44cd-983c-103013a589b9",
+        "qname": "core:ForValuesShareCapitalSharePremiumUseAppropriateItemsDimensionMembersInStatementChangesInEquityCross-reference",
+        "name": "For values of share capital and share premium, use appropriate items and dimension members in 'Statement of Changes in Equity' [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer gwerthoedd cyfalaf cyfranddaliadau a phremiwm cyfranddaliadau, defnyddiwch y rhifau dimensiwn ac eitemau priodol yn y 'Datganiad o Newidiadau mewn Ecwiti' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForValuesShareCapitalSharePremiumUseAppropriateItemsDimensionMembersInStatementChangesInEquityCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "c101b8e5-28d2-4a34-8baf-fa76014c0648",
+            "qname": "core:StatementChangesInEquityHeading",
+            "name": "Statement of changes in equity [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Datganiad am newidiadau mewn ecwiti [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:StatementChangesInEquityHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "f775cef4-45d6-451f-aa1e-97389d398124",
+        "qname": "core:UseAnalysisItemOtherTagInMainInterestExpenseSectionToCoverFurtherSpecificInterestExpenseItemsOtherInterestExpenseCross-reference",
+        "name": "Use analysis item and 'other' tag in main 'Interest expense' section to cover further specific interest expense items and 'other interest expense' [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Defnyddiwch eitem dadansoddiad a thag 'arall' yn y brif adran 'gwariant llog' er mwyn cynnwys eitemau gwariant llog penodol arall a 'gwariant llog arall' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:UseAnalysisItemOtherTagInMainInterestExpenseSectionToCoverFurtherSpecificInterestExpenseItemsOtherInterestExpenseCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "2945f7b2-2b9e-47c3-aa5c-5c1ec7404b0a",
+            "qname": "core:InterestExpense",
+            "name": "Interest expense",
+            "xbrl_type": "monetaryItemType",
+            "full_type": "xbrli:monetaryItemType",
+            "label_cy": "Costau llog",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:InterestExpense",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "5f7dd7c4-6621-4cbe-9e6a-7ca886dbc3f0",
+        "qname": "core:UseAnalysisItemOtherTagInMainInterestIncomeSectionToCoverFurtherSpecificInterestIncomeItemsOtherInterestIncomeCross-reference",
+        "name": "Use analysis item and 'other' tag in main 'Interest income' section to cover further specific interest income items and 'other interest income' [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Defnyddiwch eitem dadansoddiad a thag 'arall' yn y brif adran 'incwm llog' er mwyn cynnwys eitemau incwm llog penodol arall ac 'incwm llog arall' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:UseAnalysisItemOtherTagInMainInterestIncomeSectionToCoverFurtherSpecificInterestIncomeItemsOtherInterestIncomeCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "1d33fcb3-060b-4316-a959-15348aa37e64",
+            "qname": "core:InterestIncome",
+            "name": "Interest income",
+            "xbrl_type": "monetaryItemType",
+            "full_type": "xbrli:monetaryItemType",
+            "label_cy": "Incwm llog",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:InterestIncome",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "26190917-aefe-4cde-a230-3f31ab61f59f",
+        "qname": "direp:ForDirectorLoansAdvancesSeeRelatedPartiesSectionCross-reference",
+        "name": "For director loans and advances, see 'Related parties' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer benthyciadau a blaensymiau cyfarwyddwyr, gweler yr adran 'partïon cysylltiedig' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "direp:ForDirectorLoansAdvancesSeeRelatedPartiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "3ba44217-7760-4187-ae77-7665ccbfeb92",
+            "qname": "core:RelatedPartiesHeading",
+            "name": "Related parties [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Partïon cysylltiedig [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:RelatedPartiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "d75603f2-f87a-4c49-986d-e646e166e75b",
+        "qname": "direp:ForDirectorRemunerationSeeEmployeeBenefitsSectionCross-reference",
+        "name": "For director remuneration, see 'Employee benefits' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld cydnabyddiaethau cyfarwyddwyr, gweler yr adran 'Cydnabyddiaeth gweithwyr' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "direp:ForDirectorRemunerationSeeEmployeeBenefitsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "b1ca1133-d9ab-4c69-b0eb-c287dd1b7b01",
+            "qname": "core:EmployeeBenefitsOtherEmployeeInformationHeading",
+            "name": "Employee benefits and other employee information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Sylwad testun rhydd a gwybodaeth arall am weithwyr [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:EmployeeBenefitsOtherEmployeeInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "b2439ba5-2495-4181-9b1d-72163a05ff57",
+        "qname": "direp:ForDirectorsLoansAdvancesItemsKeyManagementPersonnelCompensationSeeRelatedPartiesSectionCross-reference",
+        "name": "For directors' loans and advances and items of key management personnel compensation, see 'Related parties' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer benthyciadau a blaensymiau cyfarwyddwyr ac eitemau iawndal personél rheoli allweddol, gweler yr adran 'Partïon cysylltiedig' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "direp:ForDirectorsLoansAdvancesItemsKeyManagementPersonnelCompensationSeeRelatedPartiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "320069de-7271-4660-a585-a1e721063c88",
+            "qname": "core:RelatedPartiesHeading",
+            "name": "Related parties [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Partïon cysylltiedig [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:RelatedPartiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "addfab1e-d843-4c1e-b8fd-9c3e10b3a771",
+        "qname": "direp:ForEventsAfterReportingDateSeeEventsAfterReportingDateSectionCross-reference",
+        "name": "For events after reporting date, see 'Events after reporting date' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer digwyddiadau ar ôl y dyddiad adrodd, gweler yr adran 'Digwyddiadau ar ôl y dyddiad adrodd [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "direp:ForEventsAfterReportingDateSeeEventsAfterReportingDateSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "dbc8d444-1583-47f9-8cad-7a95945a6221",
+            "qname": "core:EventsAfterReportingDateHeading",
+            "name": "Events after reporting date [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Digwyddiadau ar ôl y dyddiad adrodd [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:EventsAfterReportingDateHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "4fc7c0a1-1fd7-446e-97d3-5d03eb76294b",
+        "qname": "direp:ForFullInformationOnEntitySeeEntityInformationSectionCross-reference",
+        "name": "For full information on entity, see 'Entity Information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer gwybodaeth lawn am yr endid, gweler yr adran 'Gwybodaeth am yr Endid' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "direp:ForFullInformationOnEntitySeeEntityInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "e6264ee7-b00c-4ed6-87ee-cf3d6b1a470f",
+            "qname": "bus:EntityInformationHeading",
+            "name": "Entity information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwybodaeth am yr endid [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "bus:EntityInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "68883270-36ad-4ef5-a731-10ef87c4fd0f",
+        "qname": "direp:ForStatementOnGoing-concernBasisSeeBasisPreparationSectionCross-reference",
+        "name": "For statement on going-concern basis, see 'Basis of preparation' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer datganiad ar sail busnes hyfyw, gweler yr adran 'Sail paratoi' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "direp:ForStatementOnGoing-concernBasisSeeBasisPreparationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "53efccb0-fe58-4b93-94e1-8ded676f2278",
+            "qname": "core:BasisPreparationGeneralInformationOnFinancialStatementsHeading",
+            "name": "Basis of preparation and general information on financial statements [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Sail paratoi a gwybodaeth gyffredinol ar ddatganiadau ariannol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:BasisPreparationGeneralInformationOnFinancialStatementsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "69e83465-c113-4d1c-a25b-b913a235091f",
+        "qname": "core:ForCreditorsPayablesRelatedToContractsWithCustomersSeeContractAssetsLiabilitiesSectionCross-reference",
+        "name": "For creditors / payables related to contracts with customers, see 'Contract assets and liabilities' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer credydwyr / symiau taladwy cysylltiedig â chontractau gyda chwsmeriaid, gweler yr adran 'Asedau a rhwymedigaethau contract' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForCreditorsPayablesRelatedToContractsWithCustomersSeeContractAssetsLiabilitiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "999c7840-9337-4192-bdf4-82b8a56f0b28",
+            "qname": "core:ContractAssetsLiabilitiesHeading",
+            "name": "Contract assets and liabilities [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Asedau ac atebolrwydd contract [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ContractAssetsLiabilitiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "e29dd92d-b607-4a6b-9fad-26254a006bfa",
+        "qname": "core:ForDebtorsReceivablesRelatedToContractsWithCustomersSeeContractAssetsLiabilitiesSectionCross-reference",
+        "name": "For debtors / receivables related to contracts with customers, see 'Contract assets and liabilities' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer dyledwyr / symiau derbyniadwy cysylltiedig â chontractau gyda chwsmeriaid, gweler yr adran 'Asedau a rhwymedigaethau contract' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDebtorsReceivablesRelatedToContractsWithCustomersSeeContractAssetsLiabilitiesSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "c1923ab0-69b4-47c9-bfeb-a7e2679d7a90",
+            "qname": "core:ContractAssetsLiabilitiesHeading",
+            "name": "Contract assets and liabilities [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Asedau ac atebolrwydd contract [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:ContractAssetsLiabilitiesHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "21c51d89-ea09-47f6-ae10-331da704bbd2",
+        "qname": "core:ForOtherItemsWhichMayBeIncludedInReconciliationSeeOtherRelevantNotesSectionsCross-reference",
+        "name": "For other items which may be included in the reconciliation, see other relevant 'Notes' sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld eitemau eraill allai fod yn gynwysedig yn y cysoniad, gweler yr adran 'Nodiadau' perthnasol eraill [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForOtherItemsWhichMayBeIncludedInReconciliationSeeOtherRelevantNotesSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "83bfbfe6-2fe5-470e-ac8e-f29a59d3625e",
+            "qname": "core:NotesDetailedDisclosuresHeading",
+            "name": "Notes and detailed disclosures [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Nodiadau a datgeliadau manwl [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:NotesDetailedDisclosuresHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "41327b83-83ae-4b43-bed5-2e3d5f9a6327",
+        "qname": "core:ForGainLossInNetAssetsFromOperationsUseProfitAfterTaxOtherItemsFromIncomeStatementCross-reference",
+        "name": "For gain (loss) in net assets from operations, use profit after tax and other items from 'Income Statement' [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer enillion (colledion) mewn asedau net o weithrediadau, defnyddiwch elw ar ôl treth ac eitemau eraill o'r 'Datganiad Incwm' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForGainLossInNetAssetsFromOperationsUseProfitAfterTaxOtherItemsFromIncomeStatementCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "b8110611-90bd-4d2a-a20f-804983cd7e78",
+            "qname": "core:IncomeStatementHeading",
+            "name": "Income statement [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Datganiad incwm [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:IncomeStatementHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "db0a5a53-cd71-43d3-abeb-f4c4c99cb12f",
+        "qname": "core:ForFurtherBreakdownsInsuranceIncomesExpensesGainsLossesSeeNotesOnIncomeExpenseAdditionalInsuranceSectorItemsOtherRelevantSectionsCross-reference",
+        "name": "For further breakdowns of insurance incomes, expenses, gains and losses, see 'Notes on income and expense, additional insurance sector items' and other relevant sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld mwy o ddadansoddiad o incwm yswiriant, treuliau, enillion a cholledion, gweler yr adran 'Nodiadau ar incwm a threuliau, eitemau ychwanegol y sector yswiriant' ac adrannau perthnasol eraill [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFurtherBreakdownsInsuranceIncomesExpensesGainsLossesSeeNotesOnIncomeExpenseAdditionalInsuranceSectorItemsOtherRelevantSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "423f59e8-43cd-4e0e-862d-52cde203a243",
+            "qname": "core:NotesOnIncomeExpenseAdditionalInsuranceSectorItemsHeading",
+            "name": "Notes on income and expense, additional insurance sector items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Nodiadau ar incwm a gwariant, eitemau ychwanegol y sector yswiriant [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:NotesOnIncomeExpenseAdditionalInsuranceSectorItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "b48f251f-20f9-4b2c-938e-734c66d5c899",
+        "qname": "core:ForInsuranceSpecificIncomeStatementItemsSeeIncomeStatementInsuranceSectorOtherAppropriateSectionsCross-reference",
+        "name": "For insurance specific income statement items, see 'Income statement, insurance sector' and other appropriate sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer eitemau datganiad incwm sy'n benodol i yswiriant, gweler 'Datganiad incwm, sector yswiriant' ac adrannau priodol eraill [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForInsuranceSpecificIncomeStatementItemsSeeIncomeStatementInsuranceSectorOtherAppropriateSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "8853cefd-c0db-4329-928d-4f502bcbe092",
+            "qname": "core:IncomeStatementInsuranceSectorHeading",
+            "name": "Income statement, insurance sector [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Datganiad incwm, sector yswiriant [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:IncomeStatementInsuranceSectorHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "c2e67c0a-fbd3-424c-8313-0bf8c4622529",
+        "qname": "core:ForOtherInsuranceItemsSeeInsuranceAssetsLiabilitiesAdditionalInsuranceSectorItemsOtherAppropriateSectionsCross-reference",
+        "name": "For other insurance items, see 'Insurance assets and liabilities, additional insurance sector items' and other appropriate sections [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer eitemau yswiriant eraill, gweler yr adran  'Asedau a rhwymedigaethau yswiriant, eitemau ychwanegol y sector yswiriant' ac adrannau priodol eraill [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForOtherInsuranceItemsSeeInsuranceAssetsLiabilitiesAdditionalInsuranceSectorItemsOtherAppropriateSectionsCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "073299ef-534d-428f-a82c-710040f3a580",
+            "qname": "core:InsuranceAssetsLiabilitiesAdditionalInsuranceSectorItemsHeading",
+            "name": "Insurance assets and liabilities, additional insurance sector items [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Asedau a rhwymedigaethau yswiriant, eitemau ychwanegol y sector yswiriant [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:InsuranceAssetsLiabilitiesAdditionalInsuranceSectorItemsHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "b5430c55-b27e-4847-86be-24cebe49dcd0",
+        "qname": "core:ForRemainingInvestmentIncomeExpenseItemsSeeNotesOnIncomeExpenseSectionInBankingFinanceSectorItemsSectionCross-reference",
+        "name": "For remaining investment income (expense) items, see 'Notes on income and expense' section in 'Banking and finance sector items' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld gweddill yr eitemau incwm buddsoddi (traul), gweler yr adran 'Nodiadau ar incwm a threuliau' yn yr adran 'Bancio ac eitemau'r sector cyllid' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForRemainingInvestmentIncomeExpenseItemsSeeNotesOnIncomeExpenseSectionInBankingFinanceSectorItemsSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "54c2a42c-ab87-4b74-a6e0-b53b5030553c",
+            "qname": "core:NotesOnIncomeExpenseHeading",
+            "name": "Notes on income and expense [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Nodiadau ar incwm a gwariant [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:NotesOnIncomeExpenseHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "85dbab96-a210-4c08-8ce3-7beed9d851ca",
+        "qname": "core:ForAccountingPoliciesOnConsolidationSeeMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For accounting policies on consolidation, see 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld polisi cyfrifyddu ar gyfnerthu, gweler yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAccountingPoliciesOnConsolidationSeeMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "0a9806b9-80af-4bc7-8a88-ebd0a9f75333",
+            "qname": "core:MaterialAccountingPolicyInformationHeading",
+            "name": "Material accounting policy information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwybodaeth polisïau cyfrifyddu materol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:MaterialAccountingPolicyInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "813f813a-5fc6-4034-865e-d2d032248999",
+        "qname": "core:ForDepreciationMethodsUsefulLivesSeePropertyPlantEquipmentPolicyIncludingRight-of-useInMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For depreciation methods and useful lives, see 'Property, plant and equipment policy, including right-of-use' in 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dulliau dibrisio a bywydau defnyddiol, gweler 'Polisi Eiddo, offer a chyfarpar' yn cynnwys hawl defnyddio yn yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDepreciationMethodsUsefulLivesSeePropertyPlantEquipmentPolicyIncludingRight-of-useInMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "8829df33-bea0-4723-8733-ab62d8c07f2b",
+            "qname": "core:PropertyPlantEquipmentPolicyIncludingRight-of-use",
+            "name": "Property, plant and equipment policy, including right-of-use",
+            "xbrl_type": "stringItemType",
+            "full_type": "xbrli:stringItemType",
+            "label_cy": "Polisi eiddo, offer a chyfarpar, yn cynnwys hawl defnyddio",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:PropertyPlantEquipmentPolicyIncludingRight-of-use",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "f481d3c4-eb34-4bca-9719-657b137c5d1f",
+        "qname": "core:ForAmortisationMethodsUsefulLivesSeeIntangibleAssetsPolicyIncludingRight-of-useInMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For amortisation methods and useful lives, see 'Intangible assets policy, including right-of-use' in 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dulliau amorteiddiad a bywydau defnyddiol, gweler 'Polisi asedau anniriaethol' yn cynnwys hael defnyddio yn yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAmortisationMethodsUsefulLivesSeeIntangibleAssetsPolicyIncludingRight-of-useInMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "f9d4fb1b-6da7-474c-b760-1e498a9ef089",
+            "qname": "core:IntangibleAssetsPolicyIncludingRight-of-use",
+            "name": "Intangible assets policy, including right-of-use",
+            "xbrl_type": "stringItemType",
+            "full_type": "xbrli:stringItemType",
+            "label_cy": "Polisi asedau anniriaethol, yn cynnwys hawl defnyddio",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:IntangibleAssetsPolicyIncludingRight-of-use",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "43e98ccb-5aff-4435-b78b-3beadac709b0",
+        "qname": "core:ForDepreciationMethodsUsefulLivesSeeInvestmentPropertyPolicyIncludingRight-of-useInMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For depreciation methods and useful lives, see 'Investment property policy, including right-of-use' in 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dulliau dibrisio a bywydau defnyddiol, gweler 'Polisi eiddo buddsoddi' yn cynnwys hawl defnyddio yn yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDepreciationMethodsUsefulLivesSeeInvestmentPropertyPolicyIncludingRight-of-useInMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "737438ec-e5ca-45b5-8474-c1dc68c7d787",
+            "qname": "core:InvestmentPropertyPolicyIncludingRight-of-use",
+            "name": "Investment property policy, including right-of-use",
+            "xbrl_type": "stringItemType",
+            "full_type": "xbrli:stringItemType",
+            "label_cy": "Polisi eiddo buddsoddi, yn cynnwys asedau hawl defnyddio",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:InvestmentPropertyPolicyIncludingRight-of-use",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "a12b271f-4f22-4aa5-81b4-22f43cd31678",
+        "qname": "core:ForDepreciationMethodsUsefulLivesSeeBiologicalAssetsPolicyInMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For depreciation methods and useful lives, see 'Biological assets policy' in 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dulliau dibrisio a bywydau defnyddiol, gweler 'Polisi asedau biolegol' yn yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDepreciationMethodsUsefulLivesSeeBiologicalAssetsPolicyInMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "cdfe033f-638c-45e7-9864-e73486fca813",
+            "qname": "core:BiologicalAssetsPolicy",
+            "name": "Biological assets policy",
+            "xbrl_type": "stringItemType",
+            "full_type": "xbrli:stringItemType",
+            "label_cy": "Polisi asedau biolegol",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:BiologicalAssetsPolicy",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "3242a689-d276-4732-be1b-5585665025b3",
+        "qname": "core:ForMethodUsedToAccountForInvestmentsInSubsidiariesInSeparateFinancialStatementsSeeMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For method used to account for investments in subsidiaries in separate financial statements, see 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld y dull a ddefnyddiwyd i gyfrifyddu buddsoddiadau mewn is-gwmnïau mewn datganiad ariannol ar wahân, gweler yr adran 'polisïau cyfrifyddu sylweddol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForMethodUsedToAccountForInvestmentsInSubsidiariesInSeparateFinancialStatementsSeeMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "a771e0f4-0e62-412f-8d43-0ac6e5a641db",
+            "qname": "core:MaterialAccountingPolicyInformationHeading",
+            "name": "Material accounting policy information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwybodaeth polisïau cyfrifyddu materol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:MaterialAccountingPolicyInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "f2117437-1c5a-4000-8e39-5a501e7004e6",
+        "qname": "core:ForMethodUsedToAccountForInvestmentsInAssociatesInSeparateFinancialStatementsSeeMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For method used to account for investments in associates in separate financial statements, see 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld y dull a ddefnyddiwyd i gyfrifyddu buddsoddiadau mewn unigolion cyswllt mewn datganiad ariannol ar wahân, gweler yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForMethodUsedToAccountForInvestmentsInAssociatesInSeparateFinancialStatementsSeeMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "43468d53-3775-4230-80a3-518a7c2812ca",
+            "qname": "core:MaterialAccountingPolicyInformationHeading",
+            "name": "Material accounting policy information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwybodaeth polisïau cyfrifyddu materol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:MaterialAccountingPolicyInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "4ab4a633-8492-4a4d-b0af-543df244271c",
+        "qname": "core:ForMethodUsedToAccountForInvestmentsInJointVenturesInSeparateFinancialStatementsSeeMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For method used to account for investments in joint ventures in separate financial statements, see 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld y dull a ddefnyddiwyd i gyfrifyddu buddsoddiadau mewn mentrau ar y cyd mewn datganiadau ariannol ar wahân, gweler yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForMethodUsedToAccountForInvestmentsInJointVenturesInSeparateFinancialStatementsSeeMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "d07aefc5-e9be-4feb-be8f-2cce60ba7b5f",
+            "qname": "core:MaterialAccountingPolicyInformationHeading",
+            "name": "Material accounting policy information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwybodaeth polisïau cyfrifyddu materol [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:MaterialAccountingPolicyInformationHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "dd25d45d-096e-4faf-96ec-d38efae037fb",
+        "qname": "core:ForAmortisationMethodsUsefulLivesSeeIntangibleAssetsPolicyInMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For amortisation methods and useful lives, see 'Intangible assets policy, in 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dulliau amorteiddiad a bywydau defnyddiol, gweler 'Polisi asedau anniriaethol' yn yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForAmortisationMethodsUsefulLivesSeeIntangibleAssetsPolicyInMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "9f37f9b5-d019-468d-b11e-9471b17fb596",
+            "qname": "core:IntangibleAssetsPolicy",
+            "name": "Intangible assets policy",
+            "xbrl_type": "stringItemType",
+            "full_type": "xbrli:stringItemType",
+            "label_cy": "Polisi asedau anniriaethol",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:IntangibleAssetsPolicy",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "52607953-bb93-4398-827d-c025418f1bd5",
+        "qname": "core:ForDepreciationMethodsUsefulLivesSeePropertyPlantEquipmentPolicyInMaterialAccountingPolicyInformationSectionCross-reference",
+        "name": "For depreciation methods and useful lives, see 'Property, plant and equipment policy, in 'Material accounting policy information' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld dulliau dibrisio a bywydau defnyddiol, gweler 'Polisi Eiddo, offer a chyfarpar' yn yr adran 'Gwybodaeth polisïau cyfrifyddu materol' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDepreciationMethodsUsefulLivesSeePropertyPlantEquipmentPolicyInMaterialAccountingPolicyInformationSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "4a2b25ec-5098-4464-9c50-ad5c53b7996f",
+            "qname": "core:PropertyPlantEquipmentPolicy",
+            "name": "Property, plant and equipment policy",
+            "xbrl_type": "stringItemType",
+            "full_type": "xbrli:stringItemType",
+            "label_cy": "Polisi Eiddo, offer a chyfarpar",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:PropertyPlantEquipmentPolicy",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "57cf0dfe-cc78-46c3-aa96-e15c61d50d3b",
+        "qname": "core:ForDisclosuresRelatedToExpectedCreditLossSeeDisclosuresRelatingToECLSectionCross-reference",
+        "name": "For disclosures related to expected credit loss, see 'Disclosures relating to ECL' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld datgeliadau sy'n ymwneud â cholled credyd disgwyliedig, gweler adran 'Datgeliadau yn ymwneud ag ECL' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForDisclosuresRelatedToExpectedCreditLossSeeDisclosuresRelatingToECLSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "5e6c188c-8053-415d-9d8e-c642cd119953",
+            "qname": "core:DisclosuresRelatingToECLHeading",
+            "name": "Disclosures relating to ECL [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Datgeliadau yn ymwneud ag ECL [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:DisclosuresRelatingToECLHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "efff08bd-381f-47f3-a784-4d68e5e91cd0",
+        "qname": "core:ForFurtherDisclosuresRelatedToCreditRiskSeeCreditRiskSectionCross-reference",
+        "name": "For further disclosures related to credit risk, see 'Credit risk' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "I weld rhagor o ddatgeliadau sy'n ymwneud â risg credyd, gweler adran 'Risg Credyd' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForFurtherDisclosuresRelatedToCreditRiskSeeCreditRiskSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "b02028d1-bfa0-46e4-9291-afb2e5295ef9",
+            "qname": "core:CreditRiskHeading",
+            "name": "Credit risk [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Risg credyd [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:CreditRiskHeading",
+            "abstract": true,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tree_id": "0000",
+        "uuid": "752fd469-d4aa-4ecf-919a-16385beccb7b",
+        "qname": "core:ForShortTermLowValueLeaseCommitmentsSeeLeaseExpenseLesseeSectionCross-reference",
+        "name": "For short term and low value lease commitments, see 'Lease expense, lessee' section [cross-reference]",
+        "xbrl_type": "xrefItemType",
+        "full_type": "types:xrefItemType",
+        "label_cy": "Ar gyfer ymrwymiadau les tymor byr a gwerth isel, gweler yr adran 'Treuliau les, lesddeiliad' [croesgyfeirio]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "core:ForShortTermLowValueLeaseCommitmentsSeeLeaseExpenseLesseeSectionCross-reference",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "885d34c0-f9cb-4fdb-abfb-8b34f00c3541",
+            "qname": "core:LeaseExpenseLessee",
+            "name": "Lease expense, lessee",
+            "xbrl_type": "monetaryItemType",
+            "full_type": "xbrli:monetaryItemType",
+            "label_cy": "Traul prydles, prydlesai",
+            "substitution_group": "xbrli:item",
+            "concept_id": "core:LeaseExpenseLessee",
+            "abstract": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

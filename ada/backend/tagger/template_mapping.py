@@ -1,0 +1,105 @@
+from __future__ import annotations
+
+
+VISIBLE_FIELD_BINDINGS = {
+    "profitLoss.turnover.current": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[2]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:TurnoverRevenue'])[1]"},
+    "profitLoss.turnover.previous": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[2]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:TurnoverRevenue'])[2]"},
+    "profitLoss.otherIncome.current": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[3]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:OtherOperatingIncomeFormat2'])[1]"},
+    "profitLoss.otherIncome.previous": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[3]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:OtherOperatingIncomeFormat2'])[2]"},
+    "profitLoss.costMaterials.current": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[4]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:RawMaterialsConsumablesUsed'])[1]"},
+    "profitLoss.costMaterials.previous": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[4]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:RawMaterialsConsumablesUsed'])[2]"},
+    "profitLoss.staffCosts.current": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[5]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:StaffCostsEmployeeBenefitsExpense'])[1]"},
+    "profitLoss.staffCosts.previous": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[5]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:StaffCostsEmployeeBenefitsExpense'])[2]"},
+    "profitLoss.depreciation.current": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[6]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:DepreciationAmortisationImpairmentExpense'])[1]"},
+    "profitLoss.depreciation.previous": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[6]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:DepreciationAmortisationImpairmentExpense'])[2]"},
+    "profitLoss.otherCharges.current": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[7]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:OtherOperatingExpensesFormat2'])[1]"},
+    "profitLoss.otherCharges.previous": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[7]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:OtherOperatingExpensesFormat2'])[2]"},
+    "profitLoss.tax.current": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[8]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:TaxTaxCreditOnProfitOrLossOnOrdinaryActivities'])[1]"},
+    "profitLoss.tax.previous": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[8]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:TaxTaxCreditOnProfitOrLossOnOrdinaryActivities'])[2]"},
+    "profitLoss.profitLoss.current": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[9]/td[2]//strong", "tagged_xpath": "(//ix:nonFraction[@name='core:ProfitLoss'])[1]"},
+    "profitLoss.profitLoss.previous": {"untagged_xpath": "(//table[@class='statement'])[1]//tr[9]/td[3]//strong", "tagged_xpath": "(//ix:nonFraction[@name='core:ProfitLoss'])[2]"},
+    "balanceSheet.calledUpShareCapital.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[2]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset'])[1]"},
+    "balanceSheet.calledUpShareCapital.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[2]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset'])[2]"},
+    "balanceSheet.fixedAssets.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[3]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:FixedAssets'])[1]"},
+    "balanceSheet.fixedAssets.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[3]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:FixedAssets'])[2]"},
+    "balanceSheet.currentAssets.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[4]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:CurrentAssets'])[1]"},
+    "balanceSheet.currentAssets.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[4]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:CurrentAssets'])[2]"},
+    "balanceSheet.prepayments.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[5]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:PrepaymentsAccruedIncome'])[1]"},
+    "balanceSheet.prepayments.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[5]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:PrepaymentsAccruedIncome'])[2]"},
+    "balanceSheet.creditorsWithinOneYear.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[6]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:Creditors'])[1]"},
+    "balanceSheet.creditorsWithinOneYear.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[6]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:Creditors'])[2]"},
+    "balanceSheet.netCurrentAssets.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[7]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:NetCurrentAssetsLiabilities'])[1]"},
+    "balanceSheet.netCurrentAssets.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[7]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:NetCurrentAssetsLiabilities'])[2]"},
+    "balanceSheet.totalAssetsLessCurrentLiabilities.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[8]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:TotalAssetsLessCurrentLiabilities'])[1]"},
+    "balanceSheet.totalAssetsLessCurrentLiabilities.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[8]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:TotalAssetsLessCurrentLiabilities'])[2]"},
+    "balanceSheet.creditorsAfterOneYear.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[9]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:Creditors'])[3]"},
+    "balanceSheet.creditorsAfterOneYear.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[9]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:Creditors'])[4]"},
+    "balanceSheet.provisions.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[10]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:ProvisionsForLiabilitiesBalanceSheetSubtotal'])[1]"},
+    "balanceSheet.provisions.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[10]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:ProvisionsForLiabilitiesBalanceSheetSubtotal'])[2]"},
+    "balanceSheet.accruals.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[11]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:AccruedLiabilitiesNotExpressedWithinCreditorsSubtotal'])[1]"},
+    "balanceSheet.accruals.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[11]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:AccruedLiabilitiesNotExpressedWithinCreditorsSubtotal'])[2]"},
+    "balanceSheet.netAssets.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[12]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:NetAssetsLiabilities'])[1]"},
+    "balanceSheet.netAssets.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[12]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:NetAssetsLiabilities'])[2]"},
+    "balanceSheet.equity.current": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[13]/td[2]", "tagged_xpath": "(//ix:nonFraction[@name='core:Equity'])[1]"},
+    "balanceSheet.equity.previous": {"untagged_xpath": "(//table[@class='statement'])[2]//tr[13]/td[3]", "tagged_xpath": "(//ix:nonFraction[@name='core:Equity'])[2]"},
+    "notes.averageEmployees.current": {"untagged_xpath": "(//div[@class='small' and strong[contains(., 'Average number of employees')]])[1]", "tagged_xpath": "(//ix:nonFraction[@name='core:AverageNumberEmployeesDuringPeriod'])[1]"},
+    "notes.offBalanceSheetDisclosure": {"untagged_xpath": "(//div[@class='small' and normalize-space(.)='No'])[1]", "tagged_xpath": "(//ix:nonNumeric[@name='core:GeneralDescriptionAnyOff-balanceSheetArrangementsIncludingNaturePurposeFinancialImpactOnEntity'])[1]"},
+    "project.authorisationDate": {"tagged_xpath": "(//ix:nonNumeric[@name='core:DateAuthorisationFinancialStatementsForIssue'])[1]"},
+    "project.currentPeriodStart": {
+        "untagged_xpath": "//span[@class='template-placeholder-current-period-start']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:StartDateForPeriodCoveredByReport'])[1]",
+    },
+    "project.currentPeriodEnd": {
+        "untagged_xpath": "//span[@class='template-placeholder-current-period-end']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:EndDateForPeriodCoveredByReport'])[1]",
+    },
+    "project.balanceSheetDate": {"tagged_xpath": "(//ix:nonNumeric[@name='bus:BalanceSheetDate'])[1]"},
+    "company.name": {
+        "untagged_xpaths": [
+            "(//div[@class='company-name'])[1]",
+            "(//div[@class='company-name'])[2]",
+        ],
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:EntityCurrentLegalOrRegisteredName'])[1]",
+    },
+    "company.crn": {
+        "untagged_xpath": "//span[@class='template-placeholder-company-crn']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:UKCompaniesHouseRegisteredNumber'])[1]",
+    },
+    "company.addressLine1": {
+        "untagged_xpath": "//span[@class='template-placeholder-address-line-1']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:AddressLine1'])[1]",
+    },
+    "company.addressLine2": {
+        "untagged_xpath": "//span[@class='template-placeholder-address-line-2']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:AddressLine2'])[1]",
+    },
+    "company.city": {
+        "untagged_xpath": "//span[@class='template-placeholder-city']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:PrincipalLocation-CityOrTown'])[1]",
+    },
+    "company.region": {
+        "untagged_xpath": "//span[@class='template-placeholder-region']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:CountyRegion'])[1]",
+    },
+    "company.postcode": {
+        "untagged_xpath": "//span[@class='template-placeholder-postcode']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:PostalCodeZip'])[1]",
+    },
+    "company.principalActivities": {
+        "untagged_xpath": "//span[@class='template-placeholder-principal-activities']",
+        "tagged_xpath": "(//ix:nonNumeric[@name='bus:DescriptionPrincipalActivities'])[1]",
+    },
+}
+
+
+TEXT_REPLACEMENTS = {
+    "company.name": "SOUND & YMMIJ LTD",
+    "company.crn": "10433453",
+    "project.currentPeriodStart.display": "01 November 2023",
+    "project.currentPeriodEnd.display": "31 October 2024",
+    "project.balanceSheetDate.display": "31 October 2024",
+    "project.authorisationDate.display": "31 July 2025",
+    "project.directorName": "James Osman Kerem Kent",
+    "notes.offBalanceSheetDisclosure": "No",
+    "notes.averageEmployees.current": "1",
+}

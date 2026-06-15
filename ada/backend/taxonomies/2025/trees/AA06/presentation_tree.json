@@ -1,0 +1,221 @@
+[
+  {
+    "elr": "http://xbrl.frc.org.uk/dsep/roles/DSEPStatementGuaranteeAA06",
+    "definition": "113 - DSEP Statement of Guarantee (AA06)",
+    "numeric_part": 113,
+    "root_tree": [
+      {
+        "tree_id": "0000",
+        "uuid": "8e2018ee-f551-4867-83e9-76662cc2538c",
+        "qname": "dsep:DSEPStatementGuaranteeAA06Heading",
+        "name": "DSEP Statement of Guarantee (AA06) [heading]",
+        "xbrl_type": "headingItemType",
+        "full_type": "types:headingItemType",
+        "label_cy": "Datganiad o Warant DSEP (AA06) [pennawd]",
+        "substitution_group": "xbrli:item",
+        "concept_id": "dsep:DSEPStatementGuaranteeAA06Heading",
+        "abstract": true,
+        "children": [
+          {
+            "tree_id": "0000-0000",
+            "uuid": "79d08ced-c513-42a5-a7cd-2d68bda5edea",
+            "qname": "bus:EntityInformationHeading",
+            "name": "Entity information [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwybodaeth am yr endid [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "bus:EntityInformationHeading",
+            "abstract": true,
+            "children": [
+              {
+                "tree_id": "0000-0000-0000",
+                "uuid": "ccd84597-3b4c-40cd-bc4c-5483595485f7",
+                "qname": "bus:UKCompaniesHouseRegisteredNumber",
+                "name": "UK Companies House registered number",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Rhif cofrestredig Tŷ'r Cwmnïau yn y DU",
+                "substitution_group": "xbrli:item",
+                "concept_id": "bus:UKCompaniesHouseRegisteredNumber",
+                "abstract": false,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0000-0001",
+                "uuid": "afb975cb-23d7-4df8-a7f8-1135d13939db",
+                "qname": "bus:EntityCurrentLegalOrRegisteredName",
+                "name": "Entity current legal or registered name",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Enw cyfreithiol neu gofrestredig presennol yr endid",
+                "substitution_group": "xbrli:item",
+                "concept_id": "bus:EntityCurrentLegalOrRegisteredName",
+                "abstract": false,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0000-0002",
+                "uuid": "25908ef8-1a09-4f7f-8426-1210b965dec3",
+                "qname": "bus:EndDateForPeriodCoveredByReport",
+                "name": "End date for period covered by report",
+                "xbrl_type": "dateItemType",
+                "full_type": "xbrli:dateItemType",
+                "label_cy": "Dyddiad terfyn cyfnod yr adroddiad",
+                "substitution_group": "xbrli:item",
+                "concept_id": "bus:EndDateForPeriodCoveredByReport",
+                "abstract": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tree_id": "0000-0001",
+            "uuid": "1c083fd9-4829-4927-bd37-d2342c030c92",
+            "qname": "dsep:GuaranteeByParentSubsidiaryCompanyHeading",
+            "name": "Guarantee by parent of a subsidiary company [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Gwarant gan riant is-gwmni [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "dsep:GuaranteeByParentSubsidiaryCompanyHeading",
+            "abstract": true,
+            "children": [
+              {
+                "tree_id": "0000-0001-0000",
+                "uuid": "94a5f89a-b4e5-4938-8d6f-d4c54c6f09c7",
+                "qname": "dsep:OnlyOneFollowingThreeStatementsMayBeTaggedGuidance",
+                "name": "Only one of the following three statements may be tagged [guidance]",
+                "xbrl_type": "guidanceItemType",
+                "full_type": "types:guidanceItemType",
+                "label_cy": "Dim ond un o'r tri datganiad canlynol y mae modd ei dagio [canllawiau]",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:OnlyOneFollowingThreeStatementsMayBeTaggedGuidance",
+                "abstract": true,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0001-0001",
+                "uuid": "4a03fc26-59f4-429e-8835-7bd470d52c0a",
+                "qname": "dsep:StatementThatParentGuaranteesLiabilitiesDormantSubsidiaryExemptionFromPreparingAccountsUnderSection394CCompaniesAct2006",
+                "name": "Statement that parent guarantees the liabilities of the dormant subsidiary (exemption from preparing accounts) under section 394C Companies Act 2006",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Datganiad bod y rhiant-gwmni yn gwarantu rhwymedigaethau'r is-gwmni segur (eithriad rhag paratoi cyfrifon) o dan adran 394C o Ddeddf Cwmnïau 2006",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:StatementThatParentGuaranteesLiabilitiesDormantSubsidiaryExemptionFromPreparingAccountsUnderSection394CCompaniesAct2006",
+                "abstract": false,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0001-0002",
+                "uuid": "5f3913a1-796a-4a93-996c-ea2df02b4422",
+                "qname": "dsep:StatementThatParentGuaranteesLiabilitiesDormantSubsidiaryExemptionFromFilingAccountsUnderSection448CCompaniesAct2006",
+                "name": "Statement that parent guarantees the liabilities of the dormant subsidiary (exemption from filing accounts) under section 448C Companies Act 2006",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Datganiad bod y rhiant-gwmni yn gwarantu rhwymedigaethau'r is-gwmni segur (eithriad rhag ffeilio cyfrifon) o dan adran 448C o Ddeddf Cwmnïau 2006",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:StatementThatParentGuaranteesLiabilitiesDormantSubsidiaryExemptionFromFilingAccountsUnderSection448CCompaniesAct2006",
+                "abstract": false,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0001-0003",
+                "uuid": "f789afb8-b542-4188-be59-0b0b390f02e0",
+                "qname": "dsep:StatementThatParentGuaranteesLiabilitiesSubsidiaryExemptionFromAuditUnderSection479CCompaniesAct2006",
+                "name": "Statement that parent guarantees the liabilities of the subsidiary (exemption from audit) under section 479C Companies Act 2006",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Datganiad bod y rhiant-gwmni yn gwarantu rhwymedigaethau'r is-gwmni (eithriad rhag bod yn destun archwiliad) o dan adran 479C o Ddeddf Cwmnïau 2006",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:StatementThatParentGuaranteesLiabilitiesSubsidiaryExemptionFromAuditUnderSection479CCompaniesAct2006",
+                "abstract": false,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0001-0004",
+                "uuid": "f24c42a9-9f3f-4a89-97d8-741cd4c67163",
+                "qname": "dsep:NameParent",
+                "name": "Name of parent",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Enw'r rhiant-gwmni",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:NameParent",
+                "abstract": false,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0001-0005",
+                "uuid": "9c362938-c761-4760-afb0-7cf177bce119",
+                "qname": "dsep:UKRegistrationNumberParent",
+                "name": "UK registration number of parent",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Rhif cofrestru'r rhiant-gwmni yn y DU",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:UKRegistrationNumberParent",
+                "abstract": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tree_id": "0000-0002",
+            "uuid": "3a39f739-602c-4173-86a8-42b2a1ba0335",
+            "qname": "dsep:DSEPStatementGuaranteeAA06SignatoriesHeading",
+            "name": "DSEP Statement of Guarantee (AA06) Signatories [heading]",
+            "xbrl_type": "headingItemType",
+            "full_type": "types:headingItemType",
+            "label_cy": "Llofnodwyr Datganiad o Warant DSEP (AA06) [pennawd]",
+            "substitution_group": "xbrli:item",
+            "concept_id": "dsep:DSEPStatementGuaranteeAA06SignatoriesHeading",
+            "abstract": true,
+            "children": [
+              {
+                "tree_id": "0000-0002-0000",
+                "uuid": "5b81dff8-4698-41dd-83b6-f80acb6e94d8",
+                "qname": "dsep:DateSigningDSEPStatementGuaranteeAA06",
+                "name": "Date of signing of DSEP Statement of Guarantee (AA06)",
+                "xbrl_type": "dateItemType",
+                "full_type": "xbrli:dateItemType",
+                "label_cy": "Dyddiad llofnodi'r Datganiad o Warant DSEP (AA06)",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:DateSigningDSEPStatementGuaranteeAA06",
+                "abstract": false,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0002-0001",
+                "uuid": "8dd6a866-2bbe-418c-a3fa-4d456dde9678",
+                "qname": "dsep:NameDirectorParentSigningDSEPStatementGuaranteeAA06",
+                "name": "Name of director of parent signing DSEP Statement of Guarantee (AA06)",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Enw cyfarwyddwr y rhiant-gwmni sy'n llofnodi Datganiad Gwarant DSEP (AA06)",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:NameDirectorParentSigningDSEPStatementGuaranteeAA06",
+                "abstract": false,
+                "children": []
+              },
+              {
+                "tree_id": "0000-0002-0002",
+                "uuid": "85508b25-ab5c-42e4-8a3b-1e4ed937e016",
+                "qname": "dsep:NameDirectorSubsidiaryCompanySigningDSEPStatementGuaranteeAA06",
+                "name": "Name of director of subsidiary company signing DSEP Statement of Guarantee (AA06)",
+                "xbrl_type": "stringItemType",
+                "full_type": "xbrli:stringItemType",
+                "label_cy": "Enw cyfarwyddwr yr is-gwmni sy'n llofnodi Datganiad Gwarant DSEP (AA06)",
+                "substitution_group": "xbrli:item",
+                "concept_id": "dsep:NameDirectorSubsidiaryCompanySigningDSEPStatementGuaranteeAA06",
+                "abstract": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

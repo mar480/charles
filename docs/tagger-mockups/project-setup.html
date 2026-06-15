@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tagger mockup: project setup</title>
+  <link rel="stylesheet" href="./mockups.css" />
+</head>
+<body>
+  <main class="page grid">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Tagger-first product</div>
+        <h1>Project setup for Companies House micro-entity filings</h1>
+        <p class="lede">The main route becomes a filing workspace. Setup captures CRN, periods, defaults, Companies House cross-checks, and mandatory status facts before the user enters figures.</p>
+        <div class="cta-bar">
+          <div class="pill ok">Setup state: draft</div>
+          <div class="pill">Template: microentity-companies-house-v1</div>
+          <div class="pill">Taxonomy: FRS-102 2024</div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Lookup result</h3>
+        <p class="lede">Companies House lookup pre-fills the filing profile, but never silently overrides the user’s selected filing defaults.</p>
+        <table class="mini-table">
+          <tr><th>CRN</th><td>10433453</td></tr>
+          <tr><th>Status</th><td>active</td></tr>
+          <tr><th>Type</th><td>private-limited-company</td></tr>
+          <tr><th>Next accounts</th><td>01 Nov 2024 to 31 Oct 2025</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="tracker">
+      <div class="step active">1. Company lookup</div>
+      <div class="step active">2. Template and taxonomy</div>
+      <div class="step">3. Reporting periods</div>
+      <div class="step">4. Hidden filing facts</div>
+    </section>
+
+    <section class="grid two-up">
+      <div class="panel">
+        <h2>Lookup and company defaults</h2>
+        <div class="field"><label>Companies House registered number</label><div class="input">10433453</div></div>
+        <div class="field"><label>Company name</label><div class="input">Sound &amp; Ymmij Ltd</div></div>
+        <div class="field"><label>Registered office summary</label><div class="input">4 Windlebrook Park, Longcross Road, Chertsey, Surrey, KT16 0BB</div></div>
+        <div class="field"><label>Entity identifier scheme</label><div class="select">http://www.companieshouse.gov.uk/</div></div>
+        <div class="field"><label>Entity identifier value</label><div class="input">10433453</div></div>
+      </div>
+      <div class="panel">
+        <h2>Template and filing profile</h2>
+        <div class="field"><label>Taxonomy year</label><div class="select">2024</div></div>
+        <div class="field"><label>Entrypoint</label><div class="select">FRS-102-2024-01-01.xsd</div></div>
+        <div class="field"><label>Template family</label><div class="select">microentity</div></div>
+        <div class="field"><label>Filing profile</label><div class="select">companies-house-microentity</div></div>
+        <div class="field"><label>Default currency</label><div class="select">GBP</div></div>
+        <div class="field"><label>Default decimals</label><div class="select">0</div></div>
+      </div>
+    </section>
+
+    <section class="grid two-up">
+      <div class="panel">
+        <h2>Reporting periods</h2>
+        <div class="grid three-up">
+          <div class="field"><label>Current period start</label><div class="input">2023-11-01</div></div>
+          <div class="field"><label>Current period end</label><div class="input">2024-10-31</div></div>
+          <div class="field"><label>Balance sheet date</label><div class="input">2024-10-31</div></div>
+        </div>
+        <div class="grid three-up">
+          <div class="field"><label>Comparative period start</label><div class="input">2022-11-01</div></div>
+          <div class="field"><label>Comparative period end</label><div class="input">2023-10-31</div></div>
+          <div class="field"><label>Authorisation date</label><div class="input">2025-07-31</div></div>
+        </div>
+        <div class="field"><label>Director signing financial statements</label><div class="input">James Osman Kerem Kent</div></div>
+      </div>
+      <div class="panel">
+        <h2>Mandatory hidden status facts</h2>
+        <div class="field"><label>Entity dormant true or false</label><div class="select">false</div></div>
+        <div class="field"><label>Entity trading status</label><div class="select">Trading</div></div>
+        <div class="field"><label>Accounting standards applied</label><div class="select">Micro-entities</div></div>
+        <div class="field"><label>Accounts status audited or unaudited</label><div class="select">AuditExempt-NoAccountantsReport</div></div>
+        <div class="field"><label>Accounts type</label><div class="select">FullAccounts</div></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

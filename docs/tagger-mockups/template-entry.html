@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tagger mockup: template entry</title>
+  <link rel="stylesheet" href="./mockups.css" />
+</head>
+<body>
+  <main class="page grid">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Editable template</div>
+        <h1>Micro-entity entry workspace</h1>
+        <p class="lede">The user edits figures directly in the template. Field state, taxonomy assistance, validation, and import review sit beside the live document rather than behind a separate manual-tagging workflow.</p>
+      </div>
+      <div class="panel">
+        <h3>Workspace actions</h3>
+        <div class="cta-bar">
+          <div class="button secondary">Import CSV</div>
+          <div class="button secondary">Import XLSX</div>
+          <div class="button secondary">Run preflight</div>
+          <div class="button primary">Generate iXBRL</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="canvas">
+        <div class="canvas-sheet">
+          <h2>Profit and Loss Account</h2>
+          <div class="sheet-row"><div>Turnover</div><div class="editable auto">18,300</div><div class="editable auto">13,987</div></div>
+          <div class="sheet-row"><div>Staff costs</div><div class="editable auto">(12,570)</div><div class="editable auto">(12,570)</div></div>
+          <div class="sheet-row"><div>Other charges</div><div class="editable auto">(3,723)</div><div class="editable auto">(2,194)</div></div>
+          <div class="sheet-row"><div><strong>Profit or loss for period</strong></div><div class="editable">(2,007)</div><div class="editable warn">(777)</div></div>
+
+          <h2 style="margin-top:24px;">Balance Sheet</h2>
+          <div class="sheet-row"><div>Current assets</div><div class="editable auto">1,000</div><div class="editable auto">1,000</div></div>
+          <div class="sheet-row"><div>Creditors within one year</div><div class="editable auto">(33,294)</div><div class="editable auto">(35,301)</div></div>
+          <div class="sheet-row"><div><strong>Total net assets (liabilities)</strong></div><div class="editable">(32,293)</div><div class="editable">(34,300)</div></div>
+
+          <h2 style="margin-top:24px;">Notes</h2>
+          <div class="sheet-row"><div>Average employees</div><div class="editable">1</div><div></div></div>
+          <div class="sheet-row"><div>Off balance sheet disclosure</div><div class="row-box" style="grid-column: span 2; padding:12px 14px;">No</div></div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="status-stack">
+          <div class="status-card">
+            <h3>Selected field</h3>
+            <p class="lede">`profitLoss.turnover.current`</p>
+            <table class="mini-table">
+              <tr><th>Concept</th><td>core:TurnoverRevenue</td></tr>
+              <tr><th>Period</th><td>Current duration</td></tr>
+              <tr><th>Unit</th><td>GBP</td></tr>
+              <tr><th>Source</th><td>Manual edit</td></tr>
+            </table>
+          </div>
+
+          <div class="status-card">
+            <h3>Validation tab</h3>
+            <div class="pill warn">1 warning</div>
+            <div class="pill ok">Mandatory tags passing</div>
+            <div class="pill">Contexts deduplicated: 11</div>
+          </div>
+
+          <div class="status-card">
+            <h3>Compact taxonomy workbench</h3>
+            <p class="lede">Search concepts, inspect labels and relationships, then push corrections back into the field inspector.</p>
+            <div class="field"><label>Search taxonomy</label><div class="input">Turnover revenue</div></div>
+            <div class="pill">core:TurnoverRevenue</div>
+            <div class="pill">presentation + dimensional details</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

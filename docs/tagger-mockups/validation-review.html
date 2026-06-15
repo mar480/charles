@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tagger mockup: validation review</title>
+  <link rel="stylesheet" href="./mockups.css" />
+</head>
+<body>
+  <main class="page grid">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Validation and export</div>
+        <h1>Preflight before Companies House submission</h1>
+        <p class="lede">The review screen combines mandatory filing facts, Arelle results, context and unit summary, generated output preview, and a place to record the external Companies House validator result.</p>
+      </div>
+      <div class="panel">
+        <div class="pill ok">Preflight: pass</div>
+        <div class="pill ok">Mandatory tags: pass</div>
+        <div class="pill warn">Arelle: 1 warning</div>
+      </div>
+    </section>
+
+    <section class="grid three-up">
+      <div class="status-card">
+        <h3>Mandatory tags</h3>
+        <table class="mini-table">
+          <tr><th>CRN</th><td>Pass</td></tr>
+          <tr><th>Balance sheet date</th><td>Pass</td></tr>
+          <tr><th>Accounts type</th><td>Pass</td></tr>
+          <tr><th>Profit or loss</th><td>Pass</td></tr>
+        </table>
+      </div>
+      <div class="status-card">
+        <h3>Generation summary</h3>
+        <table class="mini-table">
+          <tr><th>Visible facts</th><td>33</td></tr>
+          <tr><th>Hidden facts</th><td>10</td></tr>
+          <tr><th>Contexts</th><td>11</td></tr>
+          <tr><th>Units</th><td>2</td></tr>
+        </table>
+      </div>
+      <div class="status-card">
+        <h3>Companies House validator</h3>
+        <div class="field"><label>Submission result</label><div class="select">Pass / fail / pending</div></div>
+        <div class="field"><label>Reference notes</label><div class="input">Paste response summary or tracking note</div></div>
+      </div>
+    </section>
+
+    <section class="grid two-up">
+      <div class="table-card">
+        <h2>Arelle results</h2>
+        <table class="mini-table">
+          <tr><th>Severity</th><th>Code</th><th>Message</th></tr>
+          <tr><td>warning</td><td>ix11.2.1</td><td>Transformation format normalised during generation</td></tr>
+          <tr><td>info</td><td>generator</td><td>Output created from microentity tagged skeleton and project data</td></tr>
+        </table>
+      </div>
+      <div class="table-card">
+        <h2>Export actions</h2>
+        <div class="cta-bar">
+          <div class="button primary">Download XHTML</div>
+          <div class="button secondary">Open preview</div>
+          <div class="button secondary">Record CH result</div>
+        </div>
+        <p class="lede" style="margin-top:16px;">The export artifact is stored against the project so validation runs and downstream status changes remain traceable.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

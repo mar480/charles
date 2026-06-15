@@ -1,0 +1,1213 @@
+The core instruction is:
+
+This branch is now a tagger-first product, not the public taxonomy viewer. The public viewer is already hosted separately and is considered complete. Reuse the existing viewer codebase as the taxonomy/search/details/hypercube foundation for a new iXBRL tagger application focused first on a known Companies House micro-entity template workflow. The viewer and all of its files are included in the repo in the "ada" folder.
+
+The current repository already routes / to the viewer container, so the implementation should deliberately replace the main product route with the tagger dashboard/setup flow rather than treating the tagger as a secondary add-on. The current App routes / to Index, and Index renders XBRLTaxonomyExplorerContainer, which is the existing viewer entry point.
+
+The existing taxonomy viewer functionality should be retained as reusable infrastructure because it already has entrypoint grouping including Companies House forms and Charities SORP, concept selection/navigation props, advanced search state, tree locations, and dimensional relationship APIs.
+
+The backend already includes lxml and arelle-release, so the first implementation should use those for XHTML/iXBRL generation/parsing and local validation rather than inventing a separate validation path.
+
+1. Product objective
+Build the first functional version of an iXBRL tagger for Companies House-style accounts, with the micro-entity template workflow as the golden path.
+
+The target user journey is:
+
+User creates a project.
+
+User enters CRN and project defaults.
+
+App optionally fetches Companies House company profile data.
+
+User chooses the mapped micro-entity template.
+
+User manually enters figures, copy-pastes figures, or imports CSV/XLSX.
+
+Template mappings automatically create tagged facts.
+
+User reviews and confirms tags.
+
+App generates iXBRL XHTML.
+
+App checks mandatory tags internally.
+
+App validates with Arelle.
+
+User exports and tests in the Companies House validator.
+
+Manual tagging remains available for corrections and custom documents, but the main product is template-driven auto-tagging, not a primarily manual tagging tool.
+
+2. Fixture placement and exact file names
+The user will supply a micro-entity template in both untagged and tagged form.
+
+The next agent should expect the files to be placed here:
+
+fixtures/
+  microentity/
+    microentity-untagged.html
+    microentity-tagged-valid.xhtml
+    microentity-fixture-manifest.json
+    README.md
+Required fixture names
+Use these exact names:
+
+fixtures/microentity/microentity-untagged.html
+
+The untagged HTML version of the micro-entity template.
+
+This is the source document the app should load and populate. Do not edit the CSS styles as they are correct for rendering by Companies House post-submission.
+
+fixtures/microentity/microentity-tagged-valid.xhtml
+
+The tagged iXBRL/XHTML version that already passes the Companies House validator.  Do not edit the CSS styles as they are correct for rendering by Companies House post-submission.
+
+This is the golden-master semantic reference.
+
+fixtures/microentity/microentity-fixture-manifest.json
+
+Created by the agent if it does not already exist.
+
+It should describe the expected template ID, taxonomy year, taxonomy entrypoint, periods, default currency, scale, decimals, mandatory hidden facts, field mappings, and comparison strategy.
+
+fixtures/microentity/README.md
+
+Created by the agent.
+
+It should explain how to run the fixture through import, mapping, generation, Arelle validation, and Companies House test-validator submission.
+
+Important fixture rule
+If the supplied files contain real company information, the agent should not hard-code those values into the product. The template must be parameterised by project defaults: CRN, company name, dates, director name, authorisation date, dormant/trading status, accounting standard, accounts type, and other required values.
+
+The generated output does not need byte-for-byte equality with microentity-tagged-valid.xhtml. It should match the golden file semantically:
+
+Same required facts.
+
+Same concepts.
+
+Same periods.
+
+Same units.
+
+Same hidden facts.
+
+Same scale/decimals logic.
+
+Same visible template structure where practical.
+
+Same validation outcome.
+
+3. High-level architecture
+Frontend target structure
+frontend/src/pages/
+  TaggerDashboard.tsx
+  ProjectSetup.tsx
+  TaggerWorkspace.tsx
+  TaxonomyLab.tsx
+
+frontend/src/components/tagger/
+  ProjectSetupWizard.tsx
+  TemplateChooser.tsx
+  TemplateCanvas.tsx
+  EditableFactField.tsx
+  FactInspector.tsx
+  MandatoryTagPanel.tsx
+  ValidationPanel.tsx
+  ExportPanel.tsx
+  ImportReview.tsx
+  TaggerHelpScaffold.tsx
+  types.ts
+
+frontend/src/components/taxonomy/
+  explorer/
+    existing viewer/search/details components retained
+    embeddable taxonomy panel added
+Backend target structure
+backend/tagger/
+  __init__.py
+  models.py
+  storage.py
+  companies_house_client.py
+  template_registry.py
+  template_mapping.py
+  mandatory_tags.py
+  context_registry.py
+  unit_registry.py
+  ixbrl_generator.py
+  validation.py
+  importers.py
+  fixtures.py
+
+backend/routes/
+  tagger_routes.py
+Route direction
+The main app should become tagger-first:
+
+/                       -> tagger dashboard or project setup
+/projects/:id/setup     -> setup wizard if needed
+/projects/:id/tag       -> editable template/tagging workspace
+/projects/:id/validate  -> validation review
+/taxonomy-lab           -> internal expert taxonomy explorer
+The existing taxonomy viewer should not be deleted. It should become an internal “taxonomy lab” and an embeddable concept-selection panel. The current app already imports route components and places custom routes above the catch-all, so this is a natural place to add the tagger routes.
+
+4. Project setup wizard
+The setup wizard is central. It should collect all defaults that will be reused when creating facts, contexts, units and hidden mandatory tags.
+
+Setup wizard sections
+A. Company lookup
+Fields:
+
+Companies House registered number / CRN.
+
+Company name.
+
+Registered office summary.
+
+Company status.
+
+Company type.
+
+Accounts next period start/end where available.
+
+Accounts last filed type where available.
+
+The Companies House Public Data API company profile endpoint is GET https://api.company-information.service.gov.uk/company/{companyNumber} and requires an API key. The profile resource includes company number, company name, company status, company type, accounts information, accounting reference date, last accounts and next accounts period fields. Source: Companies House API docs. (developer-specs.company-information.service.gov.uk) (developer-specs.company-information.service.gov.uk)
+
+Implementation requirements:
+
+Store the API key in an environment variable.
+
+Never expose the API key to the browser.
+
+Backend endpoint should proxy the lookup.
+
+Lookup data should pre-fill and cross-check, not silently override user-entered filing data.
+
+B. Taxonomy and template
+Fields:
+
+Taxonomy year.
+
+Taxonomy entrypoint.
+
+Template family.
+
+Template version.
+
+Filing profile.
+
+Initial template:
+
+microentity
+Initial filing profile:
+
+companies-house-microentity
+The existing viewer already has entrypoint concepts and grouped entrypoint behaviour, including Companies House forms and UK/ROI accounting standards, so the agent should reuse that foundation.
+
+C. Reporting periods
+Fields:
+
+Current period start date.
+
+Current period end date.
+
+Comparative period start date.
+
+Comparative period end date.
+
+Balance sheet date.
+
+Date authorisation financial statements for issue.
+
+Director signing financial statements.
+
+D. Defaults
+Fields:
+
+Default currency, initially GBP.
+
+Default scale.
+
+Default decimals.
+
+Default transformation format for dates.
+
+Default transformation format for numbers.
+
+Entity identifier scheme.
+
+Entity identifier value, usually CRN.
+
+E. Companies House hidden/mandatory status tags
+These should appear in the setup wizard because they are high-level filing facts and often end up in the hidden section.
+
+Include at minimum:
+
+bus:EntityDormantTruefalse
+
+Label: Entity Dormant True/False.
+
+Input type: boolean/select.
+
+Example values: true/false.
+
+bus:EntityTradingStatus
+
+Label: Entity Trading Status.
+
+Input type: controlled select.
+
+bus:AccountingStandardsApplied
+
+Label: Accounting Standards Applied.
+
+Input type: controlled select.
+
+Template should default appropriately for micro-entity accounts.
+
+bus:AccountsStatusAuditedOrUnaudited
+
+Label: Accounts Status Audited or Unaudited.
+
+Input type: controlled select.
+
+Micro-entity default likely unaudited, but user should confirm.
+
+bus:AccountsType
+
+Label: Accounts Type.
+
+Input type: controlled select.
+
+Micro-entity default should align with the template/golden-master fixture.
+
+These fields must become facts in the generated iXBRL, usually in ix:hidden, unless the supplied golden template demonstrates a visible placement.
+
+5. Mandatory tag validation
+The app must internally check mandatory Companies House/FRC tags before the user reaches the Companies House validator. It can run silently during editing, but the validation review screen must show any blocking issue clearly before export.
+
+Mandatory checker design
+Create:
+
+backend/tagger/mandatory_tags.py
+It should define filing-profile-specific mandatory tag sets.
+
+Start with:
+
+companies-house-microentity
+companies-house-group-audited
+The user-provided list is for group audited accounts, so the system should support that profile, but the micro-entity fixture should have its own mandatory profile based on the golden-master file and Companies House behaviour.
+
+Mandatory tag records
+Each mandatory tag rule should include:
+
+{
+  "qname": "bus:UKCompaniesHouseRegisteredNumber",
+  "label": "UK Companies House registered number",
+  "required_for_profiles": ["companies-house-microentity", "companies-house-group-audited"],
+  "expected_period": "duration|instant|none",
+  "expected_context": "entity|reporting_period|balance_sheet_date",
+  "expected_unit": null,
+  "source": "project_default|template_field|calculated|user_input",
+  "usually_hidden": true,
+  "validation": {
+    "required": true,
+    "non_empty": true,
+    "allowed_values": []
+  }
+}
+Mandatory concepts to include
+Include the full set supplied by the user:
+
+bus:UKCompaniesHouseRegisteredNumber
+
+UK Companies House registered number.
+
+bus:BalanceSheetDate
+
+Balance Sheet Date for individual and group entity.
+
+bus:StartDateForPeriodCoveredByReport
+
+Start date for period covered by report.
+
+bus:EndDateForPeriodCoveredByReport
+
+End date for period covered by report.
+
+bus:EntityCurrentLegalOrRegisteredName
+
+Entity current legal or registered name.
+
+core:DateAuthorisationFinancialStatementsForIssue
+
+Date Authorisation Financial Statements For Issue.
+
+core:DirectorSigningFinancialStatements
+
+Director Signing Financial Statements.
+
+bus:EntityDormantTruefalse
+
+Entity Dormant True/False.
+
+bus:EntityTradingStatus
+
+Entity Trading Status.
+
+bus:AccountingStandardsApplied
+
+Accounting Standards Applied.
+
+bus:AccountsStatusAuditedOrUnaudited
+
+Accounts Status Audited or Unaudited.
+
+bus:AccountsType
+
+Accounts Type.
+
+core:AverageNumberEmployeesDuringPeriod
+
+Average number of employees during the period.
+
+core:ProfitLoss
+
+ProfitLoss.
+
+Mandatory checker behaviour
+For each mandatory tag, check:
+
+Fact exists.
+
+Correct concept QName.
+
+Required value is present.
+
+Value is valid for its type.
+
+Enumeration/controlled value is allowed where applicable.
+
+Period/context is appropriate.
+
+Unit exists where required.
+
+Decimals/scale are valid where required.
+
+Hidden/visible placement is acceptable.
+
+Fact is not duplicated incorrectly.
+
+Generated namespace prefix resolves correctly.
+
+The source of the fact is traceable to project setup, template field, calculation, or user input.
+
+The validation result should be structured:
+
+{
+  "status": "pass|warning|error",
+  "ruleId": "mandatory.bus.UKCompaniesHouseRegisteredNumber",
+  "qname": "bus:UKCompaniesHouseRegisteredNumber",
+  "message": "UK Companies House registered number is missing.",
+  "severity": "error",
+  "source": "mandatory-tags",
+  "relatedFieldId": "project.company.crn"
+}
+6. Template registry and micro-entity mapping
+Create:
+
+backend/tagger/template_registry.py
+backend/tagger/template_mapping.py
+The product should treat templates as first-class mapped products.
+
+Template definition shape
+A template definition should include:
+
+{
+  "templateId": "microentity-companies-house-v1",
+  "label": "Micro-entity accounts - Companies House compatible",
+  "version": "1.0.0",
+  "fixtureSource": "fixtures/microentity/microentity-untagged.html",
+  "goldenTaggedSource": "fixtures/microentity/microentity-tagged-valid.xhtml",
+  "defaultFilingProfile": "companies-house-microentity",
+  "supportedTaxonomyYears": ["2026", "2025"],
+  "recommendedEntrypoint": "...",
+  "fields": []
+}
+Field mapping shape
+Each editable/mapped template field should include:
+
+{
+  "fieldId": "balanceSheet.fixedAssets.current",
+  "label": "Fixed assets - current year",
+  "sourceSelector": "[data-field-id='balanceSheet.fixedAssets.current']",
+  "valueType": "monetary",
+  "concept": {
+    "qname": "core:FixedAssets",
+    "namespaceRole": "resolved-from-taxonomy"
+  },
+  "periodRule": "current_instant|current_duration|comparative_instant|comparative_duration",
+  "unitRule": "default_currency",
+  "scaleRule": "project_default",
+  "decimalsRule": "project_default",
+  "signRule": "as_entered|invert|credit_positive|debit_positive",
+  "visibility": "visible|hidden",
+  "required": true,
+  "helpId": "template.microentity.fixedAssets"
+}
+Mapping priority
+For the first successful implementation, priority should be:
+
+Project setup facts and hidden mandatory tags.
+
+Visible balance sheet facts.
+
+Average employees.
+
+Profit/loss if present in the template/golden file.
+
+Director/date authorisation facts.
+
+Remaining hidden facts.
+
+Optional notes/disclosures.
+
+The mapping should be based on the golden-master tagged file where possible: parse/extract facts from microentity-tagged-valid.xhtml, identify their concepts, periods, units, decimals, scale and hidden/visible placement, then encode those semantics into the template mapping.
+
+7. Editable template data entry
+The app must allow direct data entry into the template. This is not optional.
+
+The expected first user flow is:
+
+Choose micro-entity template.
+
+See the accounts template as an editable document.
+
+Type figures directly into cells/fields.
+
+Paste rows/cells from a spreadsheet where convenient.
+
+Let the template mappings create/update facts automatically.
+
+Review the fact inspector only when necessary.
+
+Frontend components
+Create:
+
+frontend/src/components/tagger/TemplateCanvas.tsx
+frontend/src/components/tagger/EditableFactField.tsx
+frontend/src/components/tagger/FactInspector.tsx
+Required field states
+Every editable field should display a clear state:
+
+Empty.
+
+Populated.
+
+Auto-tagged.
+
+User-confirmed.
+
+User-edited.
+
+Warning.
+
+Error.
+
+Hidden fact source.
+
+Calculated/check field.
+
+Data model for field values
+Store separately:
+
+Raw user display value.
+
+Normalised value.
+
+iXBRL fact value.
+
+Transformation format.
+
+Scale.
+
+Decimals.
+
+Sign handling.
+
+Source type: manual, paste, CSV import, XLSX import, project setup, Companies House lookup, calculated.
+
+This separation is important because user-visible values such as 1,234, dates, negative numbers, dashes, blanks and nils may need different iXBRL representations.
+
+8. CSV/XLSX import
+CSV/XLSX import should populate mapped template fields, not create arbitrary free-form documents in the first implementation.
+
+Required behaviour
+User uploads CSV or XLSX.
+
+App identifies the selected template.
+
+Importer maps rows/cells to known template field IDs.
+
+App shows an import review screen.
+
+User sees:
+
+Matched fields.
+
+Unmatched rows/cells.
+
+Existing values that would be overwritten.
+
+Warnings/errors.
+
+User accepts or rejects the import.
+
+Accepted values update template fields and tagged facts.
+
+Backend module
+Create:
+
+backend/tagger/importers.py
+Use Python csv for CSV.
+
+For XLSX, either:
+
+Add openpyxl to backend/requirements.txt, or
+
+Defer XLSX if the first session runs out of time.
+
+Given the requested 80% outcome, CSV should be implemented first and XLSX second.
+
+9. Taxonomy workbench inside the tagger
+The existing taxonomy explorer should be refactored into an embeddable panel for:
+
+Searching concepts.
+
+Reviewing labels/details.
+
+Viewing hypercube relationships.
+
+Reviewing tree locations.
+
+Debugging mappings.
+
+Manually correcting a template mapping.
+
+The existing explorer already passes year, entrypoint, loaded entrypoint, tree filter, active details tab, advanced search state and raw tree data through its props, which makes it a reasonable candidate for component extraction.
+
+Create:
+
+frontend/src/components/taxonomy/explorer/TaxonomyWorkbenchPanel.tsx
+It should provide:
+
+Compact mode for the tagger right panel.
+
+Full expert mode for /taxonomy-lab.
+
+onConceptChosen(concept) callback.
+
+Initial search query from selected field/template label.
+
+Ability to inspect dimensional relationships.
+
+The backend already exposes hypercube and dimensional relationship endpoints based on year, entrypoint href and QName.
+
+10. iXBRL generation
+Create:
+
+backend/tagger/ixbrl_generator.py
+backend/tagger/context_registry.py
+backend/tagger/unit_registry.py
+Generator responsibilities
+The generator must create XHTML/iXBRL from the project model, not from the browser DOM.
+
+It must generate:
+
+XHTML document structure.
+
+Dynamic namespace declarations.
+
+ix:header.
+
+Schema references.
+
+Contexts.
+
+Units.
+
+Hidden facts.
+
+Visible ix:nonFraction facts.
+
+Visible ix:nonNumeric facts.
+
+Scale.
+
+Decimals.
+
+Format/transformation attributes.
+
+Nil handling.
+
+Sign handling.
+
+Fact IDs.
+
+Context references.
+
+Unit references.
+
+Context registry
+Deduplicate contexts.
+
+Examples:
+
+Current year duration.
+
+Comparative year duration.
+
+Current balance sheet instant.
+
+Comparative balance sheet instant.
+
+Any dimensional context required by the taxonomy/template.
+
+No “one context per fact” generation.
+
+Unit registry
+Deduplicate units.
+
+Examples:
+
+GBP.
+
+Pure.
+
+Shares if required.
+
+Other units only if the template/golden file requires them.
+
+Dynamic namespaces
+Include:
+
+XHTML namespace.
+
+Inline XBRL namespace.
+
+XBRL instance namespace.
+
+Linkbase/XLink namespaces.
+
+Dimension namespaces if used.
+
+Only taxonomy namespaces required by selected concepts, mandatory tags and schema references.
+
+11. Validation pipeline
+Create:
+
+backend/tagger/validation.py
+frontend/src/components/tagger/ValidationPanel.tsx
+frontend/src/components/tagger/MandatoryTagPanel.tsx
+Validation layers
+Layer 1: Field validation
+Runs as the user types.
+
+Checks:
+
+Required values.
+
+Number format.
+
+Date format.
+
+Controlled values.
+
+Negative/positive sign expectations.
+
+Empty-but-required fields.
+
+Layer 2: Template/fact validation
+Runs silently during editing and visibly in review.
+
+Checks:
+
+Every required mapped field has a value or accepted nil.
+
+Every mapped fact has concept, period, context rule, unit rule, decimals and scale.
+
+Mandatory hidden facts exist.
+
+Duplicates are intentional.
+
+Calculated/check fields are consistent where possible.
+
+Layer 3: Mandatory Companies House/FRC tag validation
+Runs before export and before Arelle.
+
+Uses backend/tagger/mandatory_tags.py.
+
+Must flag missing/invalid mandatory tags before Companies House test-validator submission.
+
+Layer 4: iXBRL generation validation
+Checks generated XHTML/iXBRL structure before Arelle.
+
+Layer 5: Arelle validation
+Use arelle-release, already in backend requirements.
+
+The output should include:
+
+Severity.
+
+Code.
+
+Message.
+
+Source layer.
+
+Related fact ID.
+
+Related template field ID where possible.
+
+Link to document field where possible.
+
+Layer 6: Companies House test validator
+Companies House provides a test validator page for iXBRL submissions. Source: Companies House test validator. (test-validator.companieshouse.gov.uk)
+
+Initial implementation may be manual:
+
+User downloads generated XHTML.
+
+User submits it to the Companies House test validator.
+
+User records pass/fail in the app.
+
+User optionally pastes/upload validator feedback.
+
+If a programmatic route is later available via the Technical Interface Specification, it can be added later.
+
+12. Persistence and project lifecycle
+Create:
+
+backend/tagger/storage.py
+Use SQLite initially unless the user explicitly provides a Postgres service.
+
+Persist:
+
+Projects.
+
+Project defaults.
+
+Companies House lookup snapshot.
+
+Selected template.
+
+Template field values.
+
+Tagged facts.
+
+Mandatory tag values.
+
+Generated contexts.
+
+Generated units.
+
+Validation runs.
+
+Export artifacts.
+
+Uploaded import files metadata.
+
+Suggested project statuses:
+
+draft
+setup-complete
+template-loaded
+data-entered
+tag-review-needed
+preflight-valid
+arelle-valid
+exported
+companies-house-tested
+Do not store sensitive documents in source-controlled paths. Fixtures can live under fixtures/, but user-created project data should live in a configured data directory outside the repository or in .gitignored local storage.
+
+13. Help and guidance scaffolding
+The current viewer already uses a help provider and help labels in the main route tree and explorer UI. App wraps routes in HelpProvider, and the explorer uses HelpLabel/help anchors around controls.
+
+The tagger should scaffold help from the start.
+
+Required help anchors
+Add help IDs for:
+
+CRN lookup.
+
+Company profile data.
+
+Taxonomy year.
+
+Taxonomy entrypoint.
+
+Template choice.
+
+Current period dates.
+
+Comparative period dates.
+
+Scale.
+
+Decimals.
+
+Currency.
+
+Entity dormant true/false.
+
+Trading status.
+
+Accounting standards applied.
+
+Accounts audited/unaudited.
+
+Accounts type.
+
+Mandatory hidden tags.
+
+Editable template field.
+
+Auto-tagged field.
+
+Fact inspector.
+
+Validation panel.
+
+Arelle results.
+
+Companies House test validator export.
+
+Required external link placeholders
+Include link placeholders for:
+
+Companies House API/docs.
+
+Companies House iXBRL validator.
+
+FRC taxonomy resources.
+
+Charity Commission guidance.
+
+HMRC guidance.
+
+Do not block implementation on perfect help content. Add anchors and placeholder content so it can be expanded.
+
+14. Static HTML mockups to create
+The agent should create these files:
+
+docs/tagger-mockups/
+  project-setup.html
+  template-entry.html
+  validation-review.html
+  mockups.css
+  README.md
+The mockups should be based on the previously approved visual direction:
+
+project-setup.html
+
+Project defaults wizard.
+
+CRN lookup.
+
+Companies House result card.
+
+Taxonomy/template/default settings.
+
+Mandatory hidden tag setup controls.
+
+template-entry.html
+
+Editable micro-entity template.
+
+Auto-tagged fact fields.
+
+Right-side fact inspector/taxonomy panel.
+
+Import CSV/XLSX button.
+
+Progress/status indicators.
+
+validation-review.html
+
+Mandatory tag status.
+
+Arelle status.
+
+Context/unit summary.
+
+Document preview.
+
+Export action.
+
+Companies House test-validator recording area.
+
+The mockups are not throwaway: use them as the visual blueprint for React components.
+
+15. Backend API endpoints
+Add route registration for tagger endpoints, ideally in:
+
+backend/routes/tagger_routes.py
+Suggested endpoints:
+
+GET    /api/tagger/templates
+GET    /api/tagger/templates/<template_id>
+POST   /api/tagger/companies-house/lookup
+POST   /api/tagger/projects
+GET    /api/tagger/projects/<project_id>
+PATCH  /api/tagger/projects/<project_id>/defaults
+POST   /api/tagger/projects/<project_id>/load-template
+PATCH  /api/tagger/projects/<project_id>/fields/<field_id>
+POST   /api/tagger/projects/<project_id>/import/csv
+POST   /api/tagger/projects/<project_id>/import/xlsx
+GET    /api/tagger/projects/<project_id>/facts
+PATCH  /api/tagger/projects/<project_id>/facts/<fact_id>
+POST   /api/tagger/projects/<project_id>/preflight
+POST   /api/tagger/projects/<project_id>/generate
+POST   /api/tagger/projects/<project_id>/validate
+GET    /api/tagger/projects/<project_id>/exports/<export_id>
+POST   /api/tagger/projects/<project_id>/companies-house-result
+Keep existing taxonomy APIs available because the tagger will need them for concept lookup and dimensional relationships. The current frontend service layer already centralises entrypoint loading, search, search export and presentation entrypoint location calls, so the tagger can follow the same pattern.
+
+16. Frontend screens
+A. Dashboard
+Purpose:
+
+List projects.
+
+Create project.
+
+Open recent project.
+
+Show project status.
+
+B. Project setup wizard
+Purpose:
+
+Capture defaults.
+
+Lookup Companies House data.
+
+Choose template.
+
+Choose taxonomy year/entrypoint.
+
+Configure mandatory hidden status facts.
+
+C. Template entry workspace
+Layout:
+
+Top bar: project, company, period, save, validate, export.
+
+Main canvas: editable micro-entity template.
+
+Right panel: selected field/fact inspector.
+
+Taxonomy tab: compact taxonomy workbench.
+
+Validation tab: current silent/visible issues.
+
+Help tab or help mode.
+
+D. Import review
+Purpose:
+
+Show CSV/XLSX matched fields.
+
+Show unmatched data.
+
+Show overwritten values.
+
+Confirm import.
+
+E. Validation/export review
+Purpose:
+
+Mandatory tag status.
+
+Arelle status.
+
+Context/unit summary.
+
+Generated facts count.
+
+Hidden facts count.
+
+Export button.
+
+Record Companies House test-validator result.
+
+F. Taxonomy lab
+Purpose:
+
+Internal expert version of the existing viewer.
+
+Useful for debugging mappings and concept choices.
+
+Not the product’s primary route.
+
+17. Golden-master acceptance criteria
+The first successful version should be judged against the supplied micro-entity files.
+
+Import acceptance
+App loads fixtures/microentity/microentity-untagged.html.
+
+App creates a project with the micro-entity template.
+
+App identifies editable fields.
+
+App applies field mappings.
+
+Data-entry acceptance
+User can enter figures directly into the template.
+
+User can paste tabular data into template fields.
+
+CSV import can populate mapped fields.
+
+XLSX import should be attempted if time allows, but CSV is the minimum.
+
+Tagging acceptance
+Template creates facts automatically.
+
+Mandatory hidden facts are created from setup/defaults.
+
+User can inspect and override a mapped fact.
+
+User can inspect taxonomy concept details from the tagger.
+
+Mandatory tag acceptance
+The app checks at least the following before export:
+
+bus:UKCompaniesHouseRegisteredNumber
+bus:BalanceSheetDate
+bus:StartDateForPeriodCoveredByReport
+bus:EndDateForPeriodCoveredByReport
+bus:EntityCurrentLegalOrRegisteredName
+core:DateAuthorisationFinancialStatementsForIssue
+core:DirectorSigningFinancialStatements
+bus:EntityDormantTruefalse
+bus:EntityTradingStatus
+bus:AccountingStandardsApplied
+bus:AccountsStatusAuditedOrUnaudited
+bus:AccountsType
+core:AverageNumberEmployeesDuringPeriod
+core:ProfitLoss
+Generation acceptance
+App generates XHTML/iXBRL.
+
+Contexts are deduplicated.
+
+Units are deduplicated.
+
+Hidden facts are included.
+
+Dynamic namespaces are included.
+
+Facts use correct concepts, contexts, units, scale and decimals.
+
+Validation acceptance
+App runs internal preflight validation.
+
+App runs mandatory tag validation.
+
+App runs Arelle validation.
+
+Validation results are shown in-app.
+
+Generated output is suitable for Companies House test-validator submission.
+
+The output should aim to match the supplied tagged-valid file semantically.
+
+18. Specific implementation order for the agent
+The next agent should work in this order:
+
+Create fixtures/microentity/ structure and README/manifest expectations.
+
+Create docs/tagger-mockups/ with the three HTML mockups.
+
+Convert routing to tagger-first while preserving taxonomy lab access.
+
+Add tagger domain types/models.
+
+Add project setup wizard UI.
+
+Add Companies House lookup backend proxy and frontend integration.
+
+Add mandatory hidden/status tag fields to setup wizard.
+
+Add project persistence.
+
+Add template registry.
+
+Add micro-entity template loader.
+
+Add editable template canvas.
+
+Add automatic field-to-fact mapping.
+
+Add mandatory tag checker.
+
+Add CSV import into mapped fields.
+
+Add XLSX import if time allows.
+
+Add context and unit registries.
+
+Add iXBRL generator.
+
+Add Arelle validation endpoint.
+
+Add validation/export review UI.
+
+Add help scaffolding and tour anchors.
+
+Run frontend/backend tests and add targeted tests for template mapping, mandatory tags, context/unit deduplication and generation.
+
+19. Non-goals for the first one-shot
+The agent should not spend the first pass trying to solve every possible filing.
+
+Explicit non-goals:
+
+Fully generic manual iXBRL authoring for arbitrary accounts.
+
+Perfect support for every Companies House template.
+
+Production-grade multi-user SaaS authentication.
+
+Automatic Companies House test-validator submission unless a supported API path is available.
+
+Pixel-perfect reproduction of every supplied XHTML byte.
+
+AI-based concept inference.
+
+Advanced calculation linkbase validation beyond what Arelle already provides.
+
+Replacing the taxonomy engine/viewer internals unnecessarily.
+
+20. Security requirements
+Because draft accounts may be sensitive:
+
+Do not log uploaded document contents or fact values.
+
+Do not commit user project data.
+
+Store Companies House API keys only in environment variables.
+
+Sanitize uploaded HTML.
+
+Restrict upload file types.
+
+Add upload size limits.
+
+Store project data outside source-controlled fixture directories.
+
+Document HTTPS/reverse-proxy expectations.
+
+Make storage abstraction easy to upgrade from SQLite to Postgres.
+
+Add basic access-control hooks even if first deployment is single-user.
