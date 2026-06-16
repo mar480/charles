@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Micro-entity Accounts</title>
+
+
+<style type="text/css">
+@page {
+  size: A4;
+  margin: 18mm 18mm 22mm 18mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  background: #fff;
+  font-size: 10.5pt;
+  line-height: 1.25;
+}
+
+/*
+  Print-renderer safe page model:
+  - Do not create an artificial 297mm-tall page inside the renderer's A4 page.
+  - Use @page for physical margins.
+  - Use page-break-before rather than page-break-after to avoid blank trailing pages.
+*/
+.page {
+  position: relative;
+  width: auto;
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  display: block;
+  overflow: visible;
+  page-break-before: always;
+  page-break-after: auto;
+  break-before: page;
+  break-after: auto;
+}
+
+.first-page {
+  page-break-before: auto;
+  break-before: auto;
+}
+
+.company-name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14pt;
+  margin-top: 10mm;
+}
+
+.title {
+  text-align: center;
+  margin-top: 3mm;
+  font-size: 12pt;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 1mm;
+  font-size: 10.5pt;
+  font-weight: 700;
+}
+
+.small {
+  font-size: 10pt;
+}
+
+.spacer {
+  height: 10mm;
+}
+
+.center-block {
+  text-align: center;
+  margin-top: 18mm;
+  line-height: 1.8;
+}
+
+table.meta,
+table.statement {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 10.5pt;
+}
+
+table.meta {
+  margin-top: 10mm;
+}
+
+table.statement {
+  margin-top: 12mm;
+}
+
+table.meta td {
+  vertical-align: top;
+  padding: 2mm 0;
+}
+
+table.meta td:first-child {
+  width: 42mm;
+  font-weight: 700;
+}
+
+table.meta td:last-child {
+  padding-left: 3mm;
+}
+
+.statement tr td {
+  padding: 2mm 0;
+  vertical-align: top;
+}
+
+.statement tr td:first-child {
+  width: auto;
+  padding-right: 5mm;
+}
+
+.statement tr td:nth-child(2),
+.statement tr td:nth-child(3) {
+  width: 30mm;
+  min-width: 30mm;
+  max-width: 30mm;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.statement-header td {
+  padding-top: 0;
+  padding-bottom: 8mm;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.statement-header td:first-child {
+  font-weight: 400;
+}
+
+.currency {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.underline {
+  border-bottom: 0.4pt solid #000;
+  display: inline-block;
+  min-width: 12mm;
+  text-align: right;
+}
+
+.doubleline {
+  border-bottom: 1.2pt double #000;
+  display: inline-block;
+  min-width: 12mm;
+  text-align: right;
+}
+
+@media screen {
+  body {
+    background: #f3f3f3;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10mm auto;
+    padding: 18mm 18mm 22mm 18mm;
+    box-shadow: 0 1mm 3mm rgba(0, 0, 0, 0.2);
+    page-break-before: auto;
+    break-before: auto;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .page {
+    width: auto;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+  <!-- ========================================== -->
+  <!--                 COVER PAGE                 -->
+  <!-- ========================================== -->
+
+  <div class="page first-page">
+    <div class="company-name">SOUND &amp; YMMIJ LTD</div>
+
+    <div class="spacer"></div>
+
+    <div class="subtitle">Company Registration Number:</div>
+    <div class="title small">
+      <span class="template-placeholder-company-crn">10433453</span>
+      (England and Wales)
+    </div>
+
+    <div class="center-block small">
+      <div>Unaudited micro entity accounts for the year ended 31 October 2024</div>
+      <div class="spacer"></div>
+      <div class="subtitle">Period of accounts</div>
+      <div class="spacer" style="height: 16mm;"></div>
+      <div>Start date:
+        <span class="template-placeholder-current-period-start">01 November 2023</span>
+      </div>
+      <div>End date:
+        <span class="template-placeholder-current-period-end">31 October 2024</span>
+      </div>
+    </div>
+  </div>
+  <!-- ========================================== -->
+  <!--           COMPANY INFORMATION PAGE          -->
+  <!-- ========================================== -->
+
+  <div class="page">
+
+    <div class="company-name">SOUND &amp; YMMIJ LTD</div>
+    <div class="title">Company Information</div>
+
+    <div class="subtitle small">
+      for the Period Ended 31 October 2024
+    </div>
+
+    <table class="meta">
+      <tr>
+        <td>Registered office:</td>
+        <td>
+          <span class="template-placeholder-address-line-1">4 Windlebrook Park</span><br>
+          <span class="template-placeholder-address-line-2">Longcross Road</span><br>
+          <span class="template-placeholder-city">Chertsey</span><br>
+          <span class="template-placeholder-region">Surrey</span><br>
+          England<br>
+          <span class="template-placeholder-postcode">KT16 0BB</span>
+        </td>
+      </tr>
+    </table>
+    <table class="meta">
+      <tr>
+        <td>Principal activities:</td>
+        <td>
+          <span class="template-placeholder-principal-activities">The principal activity of the company during the year under review was the provision of musical entertainment.</span>
+          <div class="tagger-template-advisory">
+            <strong>Application guidance</strong>
+            <div style="margin-top: 6px;">
+              Describe what the business actually does in plain English.
+              Example for goods: "Retail sale of vintage furniture and home accessories."
+              Example for services: "Provision of payroll and bookkeeping services to owner-managed businesses."
+              If you use SIC codes, describe the activity rather than just listing the code, for example:
+              "Software development for logistics businesses (SIC 62012)."
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="spacer" style="height: 16mm;"></div>        
+  </div>
+
+  <!-- ========================================== -->
+  <!--          PROFIT AND LOSS ACCOUNT           -->
+  <!-- ========================================== -->
+
+  <div class="page">
+
+    <div class="company-name">SOUND &amp; YMMIJ LTD</div>
+    <div class="title">Profit and Loss Account</div>
+
+    <div class="subtitle small">
+      for the Period Ended 31 October 2024
+    </div>
+
+    <table class="statement">
+      <tr class="statement-header">
+        <td></td>
+        <td>
+<strong>2024</strong><br>£</td>
+        <td>
+<strong>2023</strong><br>£</td>
+      </tr>
+
+      <tr>
+        <td>Turnover</td>
+        <td class="currency">
+          18300
+        </td>
+        <td class="currency">
+          13987
+        </td>
+      </tr>
+
+      <tr>
+        <td>Other Income</td>
+        <td class="currency">
+          0
+        </td>
+        <td class="currency">
+          0
+        </td>
+      </tr>
+
+      <tr>
+        <td>Cost of Materials</td>
+        <td class="currency">
+          0 
+        </td>
+        <td class="currency">
+          0 
+        </td>
+      </tr>
+
+      <tr>
+        <td>Staff Costs</td>
+        <td class="currency">(12570)
+        </td>
+        <td class="currency">(12570) 
+        </td>
+      </tr>
+
+      <tr>
+        <td>Depreciation and Writeoffs</td>
+        <td class="currency">
+          0 
+        </td>
+        <td class="currency">
+          0 
+        </td>
+      </tr>
+
+      <tr>
+        <td>Other charges</td>
+        <td class="currency">(3723) 
+        </td>
+        <td class="currency">(2194) 
+        </td>
+      </tr>
+
+      <tr>
+        <td>Tax on Profit</td>
+        <td class="currency">
+          0 
+        </td>
+        <td class="currency">
+          0 
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Profit or (Loss) for Period</strong></td>
+        <td class="currency">
+          <span class="underline"><strong>
+              2007
+            </strong></span>
+        </td>
+        <td class="currency">
+          <span class="underline"><strong>(777)
+              
+            </strong></span>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+  <!-- ========================================== -->
+  <!--                BALANCE SHEET                -->
+  <!-- ========================================== -->
+
+  <div class="page">
+
+    <div class="company-name">SOUND &amp; YMMIJ LTD</div>
+    <div class="title">Balance Sheet</div>
+
+    <div class="subtitle small">
+      As at
+      31 October 2024
+    </div>
+
+    <table class="statement">
+      <tr class="statement-header">
+        <td></td>
+        <td>
+<strong>2024</strong><br>£</td>
+        <td>
+<strong>2023</strong><br>£</td>
+      </tr>
+
+      <tr>
+        <td>Called up share capital not paid:</td>
+        <td class="currency">
+          1
+        </td>
+        <td class="currency">
+          1
+        </td>
+      </tr>
+
+      <tr>
+        <td>Fixed Assets:</td>
+        <td class="currency">
+          0
+        </td>
+        <td class="currency">
+          0
+        </td>
+      </tr>
+
+      <tr>
+        <td>Current assets:</td>
+        <td class="currency">
+          1000
+        </td>
+        <td class="currency">
+          1000
+        </td>
+      </tr>
+
+      <tr>
+        <td>Prepayments and accrued income:</td>
+        <td class="currency">
+          0
+        </td>
+        <td class="currency">
+          0
+        </td>
+      </tr>
+
+      <tr>
+        <td>Creditors: amounts falling due within one year:</td>
+        <td class="currency">(33294) 
+        </td>
+        <td class="currency">(35301) 
+        </td>
+      </tr>
+
+      <tr>
+        <td><em>Net current assets (liabilities):</em></td>
+        <td class="currency">
+<span class="underline">(32294) 
+          </span>
+        </td>
+        <td class="currency">
+<span class="underline">(34301) 
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Total assets less current liabilities:</td>
+        <td class="currency">
+<span class="underline">(32293) 
+          </span>
+        </td>
+        <td class="currency">
+<span class="underline">(34300) 
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Creditors: amounts falling due after more than one year:</td>
+        <td class="currency">
+          0 
+        </td>
+        <td class="currency">
+          0 
+        </td>
+      </tr>
+
+      <tr>
+        <td>Provision for liabilities:</td>
+        <td class="currency">
+          0 
+        </td>
+        <td class="currency">
+          0 
+        </td>
+      </tr>
+
+      <tr>
+        <td>Accruals and deferred income:</td>
+        <td class="currency">
+          0 
+        </td>
+        <td class="currency">
+          0 
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Total net assets (liabilities):</strong></td>
+        <td class="currency">
+          <span class="doubleline"><strong>(32293)</strong>      
+          </span>
+        </td>
+        <td class="currency">
+          <span class="doubleline"><strong>(34300)</strong>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Capital and reserves:</strong></td>
+        <td class="currency">
+          <span class="doubleline"><strong>(32293)</strong>        
+          </span>
+        </td>
+        <td class="currency">
+          <span class="doubleline"><strong>(34300)</strong>           
+          </span>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+  <!-- ========================================== -->
+  <!--           BALANCE SHEET CONTINUED          -->
+  <!-- ========================================== -->
+
+  <div class="page">
+
+    <div class="company-name">SOUND &amp; YMMIJ LTD</div>
+    <div class="title">Balance Sheet continued</div>
+
+    <div class="small" style="margin-top: 10mm; line-height: 1.8;">
+
+      <p>
+        
+          For the year ending 31 October 2024 the company was entitled to exemption under section 477 of the Companies Act 2006 relating to small companies.
+      </p>
+
+      <p>
+        The members have not required the company to obtain an audit in accordance with section 476 of the Companies Act 2006.
+      </p>
+
+      <p>
+        The directors acknowledge their responsibilities for complying with the requirements of the Act with respect to accounting records and the preparation of accounts.
+      </p>
+
+      <p>
+        These accounts have been prepared and delivered in accordance with the provisions of the small companies regime applicable to micro-entities.
+      </p>
+
+      <div class="small" style="margin-top: 14mm; line-height: 1.9;">
+
+        <strong>
+          This report was approved by the board of directors on
+          31 July 2025
+        </strong>
+        <br>
+
+        <strong>And signed on behalf of the board by:</strong>
+        <br><br>
+
+        Name:
+
+        James Osman Kerem Kent
+
+        <br>
+
+        Status: Director
+
+      </div>
+
+      <div class="note small" style="margin-top: 16mm;">
+        The notes form part of these financial statements.
+      </div>
+
+    </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!--        FOOTNOTES / NOTES TO ACCOUNTS       -->
+    <!-- ========================================== -->
+
+    <div class="page">
+
+      <div class="company-name">SOUND &amp; YMMIJ LTD</div>
+      <div class="title">Footnotes to the Financial Statements</div>
+
+      <div class="subtitle small">
+        for the Period Ended 31 October 2024
+      </div>
+
+      <div class="spacer"></div>
+      <div class="small" style="margin-top: 3mm;">
+        <strong>1. Average number of employees: </strong><span class="template-placeholder-average-employees"></span>
+      </div>
+
+      <div class="tagger-template-advisory">
+        <strong>Application guidance</strong>
+        <div style="margin-top: 6px;">
+          Enter a whole number only. The value cannot be less than 0.
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="small"><strong>2. Off balance sheet disclosure:</strong></div>
+
+      <div class="small" style="margin-top: 3mm;">
+        <span class="template-placeholder-off-balance-sheet-disclosure">No</span>
+      </div>
+
+      <div class="tagger-template-advisory">
+        <strong>Application guidance</strong>
+        <div style="margin-top: 6px;">
+          Enter any relevant off balance sheet disclosure here. If there is nothing to report, leave the value as "No".
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!--             END OF DOCUMENT BODY           -->
+    <!-- ========================================== -->
+
+</body>
+
+</html>

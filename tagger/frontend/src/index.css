@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #f7f1e6 0%, #f0e7d7 100%);
+  color: #12202a;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.tagger-page {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.tagger-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(320px, 0.9fr);
+  gap: 18px;
+}
+
+.tagger-main,
+.tagger-sidebar {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.tagger-hero,
+.tagger-card,
+.tagger-project-card,
+.tagger-template-card {
+  border: 1px solid #d9d0c1;
+  background: rgba(255, 252, 246, 0.98);
+  box-shadow: 0 24px 60px rgba(16, 24, 32, 0.1);
+}
+
+.tagger-hero {
+  border-radius: 28px;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.tagger-card {
+  border-radius: 24px;
+  padding: 22px;
+}
+
+.tagger-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.tagger-project-card,
+.tagger-template-card {
+  border-radius: 20px;
+  padding: 18px;
+  text-align: left;
+}
+
+.tagger-template-card.is-selected {
+  outline: 3px solid #c45c35;
+}
+
+.tagger-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b24a2c;
+  margin-bottom: 10px;
+}
+
+.tagger-muted {
+  color: #54616c;
+}
+
+.tagger-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #d9d0c1;
+  font-size: 13px;
+}
+
+.tagger-form-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tagger-form-span-2 {
+  grid-column: span 2;
+}
+
+.tagger-form-grid label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.tagger-form-grid span {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: #54616c;
+}
+
+.tagger-form-grid input,
+.tagger-form-grid select,
+.tagger-card textarea,
+.tagger-actions input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid #d9d0c1;
+  background: #fff;
+  font: inherit;
+}
+
+.tagger-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.tagger-button {
+  border-radius: 999px;
+  padding: 12px 18px;
+  font: inherit;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.tagger-button.primary {
+  background: #b24a2c;
+  color: #fff;
+}
+
+.tagger-button.secondary,
+.tagger-button-link {
+  background: #fff;
+  border-color: #d9d0c1;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tagger-template-canvas {
+  overflow: auto;
+  max-height: 78vh;
+  border: 1px solid #e5dccf;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.tagger-template-canvas .tagger-editable-field {
+  display: inline-block;
+  min-width: 88px;
+  padding: 2px 4px;
+  border-bottom: 2px solid rgba(178, 74, 44, 0.35);
+  outline: none;
+  background: rgba(178, 74, 44, 0.08);
+}
+
+.tagger-template-canvas .tagger-editable-field[data-field-state="user-edited"] {
+  background: rgba(31, 92, 76, 0.12);
+  border-bottom-color: rgba(31, 92, 76, 0.45);
+}
+
+.tagger-template-canvas .tagger-editable-field[data-field-id="company.name"] {
+  display: block;
+  width: fit-content;
+  min-width: 240px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2px 8px 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  background: rgba(178, 74, 44, 0.06);
+}
+
+.tagger-template-canvas .company-name .tagger-editable-field[data-field-id="company.name"] {
+  border-bottom-width: 3px;
+}
+
+.tagger-template-canvas .tagger-editable-field[data-field-id="company.crn"] {
+  min-width: 72px;
+  text-align: center;
+}
+
+.tagger-template-canvas .tagger-editable-field[data-field-id="company.principalActivities"],
+.tagger-template-canvas .tagger-editable-field[data-field-id="notes.offBalanceSheetDisclosure"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 88px;
+  padding: 10px 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  border: 1px solid rgba(178, 74, 44, 0.35);
+  border-bottom-width: 2px;
+  border-radius: 10px;
+  background: rgba(178, 74, 44, 0.06);
+}
+
+.tagger-template-canvas .tagger-template-advisory {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid #d9d0c1;
+  border-left: 4px solid #b24a2c;
+  border-radius: 12px;
+  background: #faf6ef;
+  color: #5f4d39;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.tagger-inline-field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tagger-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tagger-table th,
+.tagger-table td {
+  padding: 10px 0;
+  text-align: left;
+  border-bottom: 1px solid #e6dccd;
+}
+
+.tagger-table th {
+  width: 42%;
+  color: #54616c;
+  font-weight: 600;
+}
+
+.tagger-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.tagger-result {
+  display: grid;
+  gap: 4px;
+}
+
+.tagger-result.error {
+  color: #b42318;
+}
+
+.tagger-result.warning {
+  color: #9b6a00;
+}
+
+@media (max-width: 980px) {
+  .tagger-page {
+    padding: 16px;
+  }
+
+  .tagger-layout,
+  .tagger-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tagger-form-span-2 {
+    grid-column: auto;
+  }
+
+  .tagger-hero {
+    flex-direction: column;
+  }
+}
